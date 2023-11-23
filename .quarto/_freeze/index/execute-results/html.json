@@ -1,0 +1,14 @@
+{
+  "hash": "f417752b86e8dee14cd413f387d1fd69",
+  "result": {
+    "markdown": "---\ntitle: \"fart loading\"\n---\n\n\n... gona b ***stinks***... To learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\"Hi baby jessica\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"Hi baby jessica\"\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
