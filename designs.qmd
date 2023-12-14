@@ -20,8 +20,15 @@ title: "Design Works"
 I modified this design from @visual-epics on Canva for my German project.
 :::
 
- - Various Pretty R Plots -
+-   Various Pretty R Plots -
+
+    ![](images/RplotMappedSVI-01.png){width="500"}
+
+::: callout-note
+Created using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia.
+:::
+
 
 ![](images/Screenshot%202023-11-28%20at%201.14.09%E2%80%AFPM.png){width="500"}
-
 ![](images/Screenshot%202023-11-28%20at%201.15.19%E2%80%AFPM.png){width="500"}
+
