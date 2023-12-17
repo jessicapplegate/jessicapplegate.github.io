@@ -6,7 +6,7 @@ title: "Welcome to the homepage!"
 
 My name is Jessica and I made this website to display works I've produced that I'm proud of!
 
-Use the navigation bar to find selected writing samples, designs, R Plots, and a little FAQ page.
+Use the navigation bar to find selected writing samples, designs (featuring some R Plots), and a little FAQ page.
 
 I'm glad you're here. Thanks for stopping by!
 
