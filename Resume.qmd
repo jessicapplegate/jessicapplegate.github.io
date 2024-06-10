@@ -1,0 +1,6 @@
+---
+title: "Resume"
+editor: visual
+---
+
+![](PDFs/resumejapplegate2024.pdf){fig-align="center" width="100%" height=700px}

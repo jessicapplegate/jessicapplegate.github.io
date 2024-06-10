@@ -1,15 +1,13 @@
 ---
-title: "Welcome to the homepage!"
+title: "Welcome to my lil website!"
 ---
 
 ------------------------------------------------------------------------
 
-My name is Jessica and I made this website to display works I've produced that I'm proud of!
+My name is Jessica and I made this website to display works I've produced!
 
-Use the navigation bar to find selected writing samples, designs (featuring some R Plots), and a little FAQ page.
+Use the navigation bar above to check out some of my projects. I'm glad you're here. Thanks for stopping by!
 
-I'm glad you're here. Thanks for stopping by!
+------------------------------------------------------------------------
 
----
-
-*I certify that the work included in this portfolio is my own original work. Work included which was conducted as a part of a team or other group is indicated and attributed as such - the other team members are named and a true description of my role in the project is included.*\
+![](images/Screenshot%202024-06-07%20at%202.56.36%E2%80%AFPM.png){width="400"}

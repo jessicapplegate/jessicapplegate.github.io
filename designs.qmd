@@ -65,9 +65,9 @@ tracts %>%
 ![](images/RplotMappedSVI-01.png){width="700"}
 
 ::: callout-note
-Created using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia.
-[SVI Data](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
+Created using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia. [SVI Data](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
 :::
+
 ```{r, eval=FALSE}
 #| code-fold: true
 library(tidyverse)
@@ -131,13 +131,10 @@ ggplot(hd_clean, aes(start, Data_Value)) +
   )
 ```
 
-![](images/NHANES Data Viz (Applegate).png){width="800"}
-
+![](images/NHANES%20Data%20Viz%20(Applegate).png){width="800"}
 
 ::: callout-note
 Created using data from The National Health and Nutrition Examination Survey [(NHANES)](https://data.cdc.gov/Heart-Disease-Stroke-Prevention/National-Health-and-Nutrition-Examination-Survey-N/5svk-8bnq/about_data)
 :::
 
-
 ![](images/Screenshot%202023-11-28%20at%201.14.09%E2%80%AFPM.png){width="500"} ![](images/Screenshot%202023-11-28%20at%201.15.19%E2%80%AFPM.png){width="500"}
-

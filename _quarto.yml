@@ -6,11 +6,17 @@ website:
   title: "Jessica Applegate"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      # - href: index.qmd
+      #   text: Home
       - about.qmd
-      - writings.qmd
+      - ResearchPortfolio.qmd
       - designs.qmd
+      - writings.qmd
+      - Resume.qmd
+      - icon: linkedin 
+        href: https://www.linkedin.com/in/jessica-applegate-197b6b230/
+      
+      
 
 format:
   html:
