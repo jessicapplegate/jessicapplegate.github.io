@@ -1,14 +1,12 @@
 ---
-title: "About + FAQ"
+title: "About"
 ---
 
 ![](images/Screenshot%202023-11-15%20at%201.23.59%20PM.png){fig-align="left" width="200"}
 
-Hi! Welcome to my little website.
+If you don't know already, I'm Jessica!
 
-On this site, you will find my research portfolio, selected writing, R plots, and other works that I am proud of.
-
-If you don't know already, I'm Jess! I'm a Master's student at the University of Washington in the Human-Centered Design & Engineering program.
+I recently graduated Summa Cum Laude from Georgia State University with a B.A. in Psychology & Sociology and am currently a Master's student at the University of Washington in the Human-Centered Design & Engineering program.
 
 I moved to Seattle from Atlanta in Summer 2024 and am excited to see what the West Coast has in-store for me.
 
