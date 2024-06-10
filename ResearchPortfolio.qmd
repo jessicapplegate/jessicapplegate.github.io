@@ -3,7 +3,7 @@ title: "Research Portfolio"
 editor: visual
 ---
 
-Welcome! I put together this slide deck to demonstrate my research experiences.
+Welcome! I put together this slide deck to describe my research experiences.
 
 Check it out and reach out if you have any questions (or need help with a project!)
 
