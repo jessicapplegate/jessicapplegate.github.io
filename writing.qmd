@@ -18,8 +18,11 @@ Here you can find selected writing samples.
 
 ## Choice Tweets
 
-![](images/Screenshot%202023-11-15%20at%202.34.41%20PM.png){width="350"}
+![](images/Screenshot%202023-11-15%20at%202.34.41%20PM.png){width="350"
+style="display: block; margin: 0 auto"}
 
-![](images/Screenshot%202023-11-15%20at%202.34.57%20PM.png){width="350"}
+![](images/Screenshot%202023-11-15%20at%202.34.57%20PM.png){width="350" 
+style="display: block; margin: 0 auto"}
 
-![](images/Screenshot%202023-11-15%20at%202.35.10%20PM.png){width="350"}
+![](images/Screenshot%202023-11-15%20at%202.35.10%20PM.png){width="350" 
+style="display: block; margin: 0 auto"}
