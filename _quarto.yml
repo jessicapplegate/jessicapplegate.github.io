@@ -11,7 +11,7 @@ website:
       - about.qmd
       - ResearchPortfolio.qmd
       - designs.qmd
-      - writings.qmd
+      - writing.qmd
       - Resume.qmd
       - icon: linkedin 
         href: https://www.linkedin.com/in/jessica-applegate-197b6b230/
