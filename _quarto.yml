@@ -4,6 +4,7 @@ project:
   
 website:
   title: "Jessica Applegate"
+  google-analytics: "G-XBKCQCB5FH"
   navbar:
     left:
       # - href: index.qmd
