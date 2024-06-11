@@ -12,6 +12,6 @@ On this site, you will find my research portfolio, selected writing, R plots, an
 
 <div class="text-right">
 
-*shhhh, i'm inside fixing things...and i made brownies.*
+*.....................................shhhh, i'm inside fixing things...and i made brownies.*
 
 </div>
