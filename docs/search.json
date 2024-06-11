@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "I’m Jess, I solve problems.",
     "section": "",
-    "text": "Hi! Welcome to my little website.\nOn this site, you will find my research portfolio, selected writing, R plots, and other works that I am proud of.\n\n\n\n\n\n\n……………………………….shhhh, i’m inside fixing things…and i made brownies."
+    "text": "Hi! Welcome to my little website.\nOn this site, you will find my research portfolio, selected writing, R plots, and other works that I am proud of.\n\n\n\n\n\n\n………………………………………..shhhh, i’m inside fixing things…and i made brownies."
   },
   {
     "objectID": "designs.html",
@@ -67,7 +67,7 @@
     "href": "Resume.html",
     "title": "Resume",
     "section": "",
-    "text": "It appears you don’t have a PDF plugin for this browser. No biggie… you can click here to download the PDF file."
+    "text": "Experience working with"
   },
   {
     "objectID": "Resume.html#i-have-2-resumes-isnt-that-fun.-one-of-these-resumes-highlights-my-more-professional-work-experiences",
@@ -144,7 +144,7 @@
     "href": "Resume.html#education",
     "title": "Resume",
     "section": "Education",
-    "text": "Education"
+    "text": "Education\n\nBachelor of Arts in Psychology & Sociology - Georgia State University\nMaster of Science in Human-Centered Design & Engineering - University of Washington"
   },
   {
     "objectID": "Resume.html#downloadable-pdf",
@@ -152,5 +152,12 @@
     "title": "Resume",
     "section": "Downloadable PDF",
     "text": "Downloadable PDF"
+  },
+  {
+    "objectID": "Resume.html#skills",
+    "href": "Resume.html#skills",
+    "title": "Resume",
+    "section": "",
+    "text": "Experience working with"
   }
 ]

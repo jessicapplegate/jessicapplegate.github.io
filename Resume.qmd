@@ -3,15 +3,26 @@ title: "Resume"
 editor: visual
 ---
 
-<!-- ## Skills -->
+<!-- how to mute stuff on page -->
+<!--
+## Skills
 
-<!-- ## Technology & software -->
+-   Experience working with
 
-<!-- ## Experience -->
+## Technology & software
 
-<!-- ## Education -->
+-   
 
+## Experience
 
-<!-- ## Downloadable PDF -->
+-   
 
-![](PDFs/resumejapplegate06_24.pdf){fig-align="center" width="100%" height="700px"}
+## Education
+
+-   Bachelor of Arts in Psychology & Sociology - Georgia State University
+
+-   Master of Science in Human-Centered Design & Engineering - University of Washington
+
+## Downloadable PDF-->
+
+![](PDFs/resumeApplegate2024.pdf){fig-align="center" width="100%" height="700px"}
