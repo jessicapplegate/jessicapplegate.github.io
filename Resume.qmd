@@ -4,6 +4,8 @@ editor: visual
 ---
 
 <!-- how to mute stuff on page -->
+
+```{=html}
 <!--
 ## Skills
 
@@ -24,5 +26,5 @@ editor: visual
 -   Master of Science in Human-Centered Design & Engineering - University of Washington
 
 ## Downloadable PDF-->
-
-![](PDFs/resumeApplegate2024.pdf){fig-align="center" width="100%" height="700px"}
+```
+![](PDFs/resumejessapplegate.docx.pdf){fig-align="center" width="100%" height="700px"}
