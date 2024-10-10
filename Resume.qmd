@@ -27,5 +27,4 @@ editor: visual
 
 ## Downloadable PDF-->
 ```
-![](PDFs/japplegateres2024.docx.pdf){fig-align="center" width="100%" height="700px"}
-
+![](PDFs/resjessapplegate2024.docx.pdf){fig-align="center" width="100%" height="700px"}
