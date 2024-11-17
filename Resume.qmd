@@ -27,5 +27,5 @@ editor: visual
 
 ## Downloadable PDF-->
 ```
-![](PDFs/japplegate_resume_november2024.docx.pdf){fig-align="center" width="100%" height="700px"}
+![](PDFs/japplegate_resume_nov24.docx.pdf){fig-align="center" width="100%" height="700px"}
 
