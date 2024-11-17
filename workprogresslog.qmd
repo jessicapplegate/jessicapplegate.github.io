@@ -1,0 +1,12 @@
+---
+title: "works in progress"
+editor: visual
+---
+
+What I've been working on lately
+
+-   Publication on the harms and benefits of Generative AI in relation to health outcomes by socioeconomic status.
+
+-   HCDE 518 (Fall 2024): Working with a team to develop an AR/VR digital design solutions to prevent car accidents. (Provide a link, images, etc)
+
+-   HCDE 501 (Fall 2024): Course focused on theoretical contributions to Human-Computer Interaction. I am examining my own experiences using a sociotechnical feminist lens to explain my relationship to the world, artifacts, and the undoing of endowed agency.
