@@ -1,6 +1,0 @@
----
-title: "Resume"
-editor: visual
----
-
-## PDF of resume below somehow idk how

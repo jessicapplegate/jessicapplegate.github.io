@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "writings.html",
+    "href": "writings.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Here you can find selected writing samples."
+  },
+  {
+    "objectID": "writings.html#academic-writings",
+    "href": "writings.html#academic-writings",
+    "title": "Writings",
+    "section": "Academic Writings",
+    "text": "Academic Writings\n\nA Summary and Critique of Two Psychology Research Articles (2023)\nSociology: Views of Family and Marriage (2023)\nOriginal Psychology Research Conference Proposal (2023)\nGSU Psychology Research Conference Poster (2023):"
+  },
+  {
+    "objectID": "writings.html#choice-tweets",
+    "href": "writings.html#choice-tweets",
+    "title": "Writing",
+    "section": "Choice Tweets",
+    "text": "Choice Tweets"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "If you don’t know already, I’m Jessica!\nI recently graduated Summa Cum Laude from Georgia State University with a B.A. in Psychology & Sociology and am currently a Master’s student at the University of Washington in the Human-Centered Design & Engineering program.\nI moved to Seattle from Atlanta in Summer 2024 and am excited to see what the West Coast has in-store for me.\n\nFrequently asked questions:\n\nWhat are your cats named?\n– Juice and Onion.\nWhere did you get your glasses?\n– Warby Parker! Although, I am currently shopping around for a more premium pair.\nWhat’s your favorite month?\n– I love November. I am a big fan of when it’s chilly enough outside to justify wearing a nice coat, but not cold to the point that I look like the Michelin man!\nWhere are you from?\n– I was born in Florida and moved to Georgia when I was 10. I’ve spent most of my life in the Southeast, but during the pandemic I picked up and moved to Maine for the heck of it!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "I’m Jess, I solve problems.",
+    "section": "",
+    "text": "Hi! Welcome to my little website.\nOn this site, you will find my research portfolio, selected writing, R plots, and other works that I am proud of.\n\n\n\n\n\n\n………………………………………..shhhh, i’m inside fixing things…and i made brownies."
+  },
+  {
+    "objectID": "designs.html",
+    "href": "designs.html",
+    "title": "Design Works",
+    "section": "",
+    "text": "Dematic Supplier Diversity Website:\n\n\n\n\nVarious Pretty R Plots that I’ve made:\n\n\n\nCode\nlibrary(sf)\n\n# print out the layes that are available\nst_layers(\"data/SVI2020_GEORGIA_tract.gdb/\")\n\n# read in as sf object\ntracts &lt;- read_sf(\"data/SVI2020_GEORGIA_tract.gdb\", layer = \"SVI2020_GEORGIA_tract\")\n\nlibrary(showtext)\nfont_add_google(name = \"Montserrat\", family = \"Montserrat\")\nshowtext_auto()\n\nlibrary(tidyverse)\n\nmap &lt;- ggplot(tracts, aes(fill = EPL_UNINSUR)) +\n  geom_sf(lwd = 0.15, color = \"black\")\n\n# we use filter to remove outliers\ntracts %&gt;% \n  filter(EPL_UNINSUR &gt; -200) %&gt;% \n  ggplot(aes(fill = EPL_UNINSUR)) +\n  geom_sf(lwd = 0.15, color = \"black\")\n\n# instead of removing the values, we make the values missing\ntracts %&gt;% \n  mutate(EPL_UNINSUR = ifelse(EPL_UNINSUR &gt; -200, EPL_UNINSUR, NA)) %&gt;%\n  select(EPL_UNINSUR) %&gt;% \n  ggplot(aes(fill = EPL_UNINSUR)) +\n  geom_sf(lwd = 0.15, color = \"black\") +\n  # using pre-defined color scheme\n  scale_fill_viridis_c(option = \"viridis\") +\n  #specify desired color gradient\n  #scale_fill_gradient(low = \"red\", high = \"yellow\") + \n  theme_minimal() +\n  labs(\n    title = \"Percentile Percentage of Uninsured Persons\",\n    #subtitle = \"Ranking values range from 0 to 1, with higher values indicating greater\n    #vulnerability\",\n    caption = \"*Data from CDC/ATSDR Social Vulnerability Index (2020)\n    Higher values indicating greater vulnerability\", \n    fill= \"Ranking Values\"\n  ) + \n  theme(\n    plot.title = element_text(hjust = 0.5),\n    text = element_text(family = \"Montserrat\")\n  )\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCreated using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia. SVI Data\n\n\n\n\nCode\nlibrary(tidyverse)\n\ncdcdata &lt;- read_csv(\"data/National_Health_and_Nutrition_Examination_Survey__NHANES__-_National_Cardiovascular_Disease_Surveillance_System.csv\")\n\ncount(cdcdata, Class, Topic)\n\noverall_heart_disease &lt;- filter(\n  cdcdata, \n  Topic == \"Hypertension\",\n  Break_Out_Category == \"Overall\", \n  Data_Value_Type == \"Age-Standardized\",\n  QuestionId != \"NH034\",\n  QuestionId != \"NH024\",\n  !is.na(Data_Value)\n)\n\nhd_clean &lt;- separate(overall_heart_disease, YearStart, c(\"start\", \"end\"), sep = \"-\") %&gt;%\n  mutate(\n    start = as.numeric(start),\n    end = as.numeric(end)\n  ) %&gt;% \n  mutate(\n    label = case_when(\n      QuestionId == \"NH033\" ~ \"BP Control among US adults (BP=130/90)\",\n      QuestionId == \"NH023\" ~ \"BP Control among US adults (BP=140/90)\",\n      QuestionId == \"NH030\" ~ \"Prevalence of HTN (BP=130/90)\",\n      QuestionId == \"NH020\" ~ \"Prevalence of HTN (BP=140/90)\",\n      QuestionId == \"NH031\" ~ \"HTN awareness among adults with HTN (BP=130/90)\",\n      QuestionId == \"NH021\" ~ \"HTN awareness among adults with HTN (BP=140/90)\",\n      QuestionId == \"NH032\" ~ \"HTN Medication Use in adults with HTN (BP=130/90)\",\n      QuestionId == \"NH022\" ~ \"HTN Medication Use in adults with HTN (BP=140/90)\"\n      \n    )\n  )\n\nlibrary(showtext)\nfont_add_google(name = \"Montserrat\", family = \"Montserrat\")\nshowtext_auto()\n\nggplot(hd_clean, aes(start, Data_Value)) + \n  geom_smooth(method = \"lm\", color = \"#A3C7D6\", fill = \"#83A2FF\") + \n  geom_errorbar(\n    aes(ymin = Low_Confidence_Limit, ymax = High_Confidence_Limit), \n    width = 0.7,\n    color = \"#9F73AB\"\n  ) + \n  geom_point(color = \"#3F3B6C\") +\n  facet_wrap(\"label\", scales = \"free_y\", ncol = 3) +\n  theme_light() +\n  labs(\n    title = \"National Cardiovascular Disease (1999 - 2016)\",\n    subtitle = \"Data from NHANES provided by CDC\",\n    x = \"Year\", y = \"Age Standardized Rate\", \n  ) +\n  theme(\n    plot.title = element_text(hjust = 0.0),\n    text = element_text(family = \"Montserrat\"),\n    strip.background = element_rect(fill = \"#3F3B6C\")\n  )\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCreated using data from The National Health and Nutrition Examination Survey (NHANES)"
+  },
+  {
+    "objectID": "designs.html#here-you-can-find-selected-designs.",
+    "href": "designs.html#here-you-can-find-selected-designs.",
+    "title": "Design Works",
+    "section": "",
+    "text": "Dematic Supplier Diversity Website:\n\n\n\n\nVarious Pretty R Plots that I’ve made:\n\n\n\nCode\nlibrary(sf)\n\n# print out the layes that are available\nst_layers(\"data/SVI2020_GEORGIA_tract.gdb/\")\n\n# read in as sf object\ntracts &lt;- read_sf(\"data/SVI2020_GEORGIA_tract.gdb\", layer = \"SVI2020_GEORGIA_tract\")\n\nlibrary(showtext)\nfont_add_google(name = \"Montserrat\", family = \"Montserrat\")\nshowtext_auto()\n\nlibrary(tidyverse)\n\nmap &lt;- ggplot(tracts, aes(fill = EPL_UNINSUR)) +\n  geom_sf(lwd = 0.15, color = \"black\")\n\n# we use filter to remove outliers\ntracts %&gt;% \n  filter(EPL_UNINSUR &gt; -200) %&gt;% \n  ggplot(aes(fill = EPL_UNINSUR)) +\n  geom_sf(lwd = 0.15, color = \"black\")\n\n# instead of removing the values, we make the values missing\ntracts %&gt;% \n  mutate(EPL_UNINSUR = ifelse(EPL_UNINSUR &gt; -200, EPL_UNINSUR, NA)) %&gt;%\n  select(EPL_UNINSUR) %&gt;% \n  ggplot(aes(fill = EPL_UNINSUR)) +\n  geom_sf(lwd = 0.15, color = \"black\") +\n  # using pre-defined color scheme\n  scale_fill_viridis_c(option = \"viridis\") +\n  #specify desired color gradient\n  #scale_fill_gradient(low = \"red\", high = \"yellow\") + \n  theme_minimal() +\n  labs(\n    title = \"Percentile Percentage of Uninsured Persons\",\n    #subtitle = \"Ranking values range from 0 to 1, with higher values indicating greater\n    #vulnerability\",\n    caption = \"*Data from CDC/ATSDR Social Vulnerability Index (2020)\n    Higher values indicating greater vulnerability\", \n    fill= \"Ranking Values\"\n  ) + \n  theme(\n    plot.title = element_text(hjust = 0.5),\n    text = element_text(family = \"Montserrat\")\n  )\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCreated using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia. SVI Data\n\n\n\n\nCode\nlibrary(tidyverse)\n\ncdcdata &lt;- read_csv(\"data/National_Health_and_Nutrition_Examination_Survey__NHANES__-_National_Cardiovascular_Disease_Surveillance_System.csv\")\n\ncount(cdcdata, Class, Topic)\n\noverall_heart_disease &lt;- filter(\n  cdcdata, \n  Topic == \"Hypertension\",\n  Break_Out_Category == \"Overall\", \n  Data_Value_Type == \"Age-Standardized\",\n  QuestionId != \"NH034\",\n  QuestionId != \"NH024\",\n  !is.na(Data_Value)\n)\n\nhd_clean &lt;- separate(overall_heart_disease, YearStart, c(\"start\", \"end\"), sep = \"-\") %&gt;%\n  mutate(\n    start = as.numeric(start),\n    end = as.numeric(end)\n  ) %&gt;% \n  mutate(\n    label = case_when(\n      QuestionId == \"NH033\" ~ \"BP Control among US adults (BP=130/90)\",\n      QuestionId == \"NH023\" ~ \"BP Control among US adults (BP=140/90)\",\n      QuestionId == \"NH030\" ~ \"Prevalence of HTN (BP=130/90)\",\n      QuestionId == \"NH020\" ~ \"Prevalence of HTN (BP=140/90)\",\n      QuestionId == \"NH031\" ~ \"HTN awareness among adults with HTN (BP=130/90)\",\n      QuestionId == \"NH021\" ~ \"HTN awareness among adults with HTN (BP=140/90)\",\n      QuestionId == \"NH032\" ~ \"HTN Medication Use in adults with HTN (BP=130/90)\",\n      QuestionId == \"NH022\" ~ \"HTN Medication Use in adults with HTN (BP=140/90)\"\n      \n    )\n  )\n\nlibrary(showtext)\nfont_add_google(name = \"Montserrat\", family = \"Montserrat\")\nshowtext_auto()\n\nggplot(hd_clean, aes(start, Data_Value)) + \n  geom_smooth(method = \"lm\", color = \"#A3C7D6\", fill = \"#83A2FF\") + \n  geom_errorbar(\n    aes(ymin = Low_Confidence_Limit, ymax = High_Confidence_Limit), \n    width = 0.7,\n    color = \"#9F73AB\"\n  ) + \n  geom_point(color = \"#3F3B6C\") +\n  facet_wrap(\"label\", scales = \"free_y\", ncol = 3) +\n  theme_light() +\n  labs(\n    title = \"National Cardiovascular Disease (1999 - 2016)\",\n    subtitle = \"Data from NHANES provided by CDC\",\n    x = \"Year\", y = \"Age Standardized Rate\", \n  ) +\n  theme(\n    plot.title = element_text(hjust = 0.0),\n    text = element_text(family = \"Montserrat\"),\n    strip.background = element_rect(fill = \"#3F3B6C\")\n  )\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nCreated using data from The National Health and Nutrition Examination Survey (NHANES)"
+  },
+  {
+    "objectID": "designs.html#here-you-can-find-some-things-ive-designed",
+    "href": "designs.html#here-you-can-find-some-things-ive-designed",
+    "title": "Design Works",
+    "section": "",
+    "text": "Dematic Supplier Diversity Website:\n\n\n\n\nVarious Pretty R Plots that I’ve made:\n\n\n\n\n\n\n\n\nNote\n\n\n\nCreated using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia."
+  },
+  {
+    "objectID": "designs.html#various-pretty-r-plots-that-ive-made",
+    "href": "designs.html#various-pretty-r-plots-that-ive-made",
+    "title": "Design Works",
+    "section": "Various Pretty R Plots that I’ve made:",
+    "text": "Various Pretty R Plots that I’ve made:\n\n\n\n\n\n\n\nNote\n\n\n\nCreated using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia."
+  },
+  {
+    "objectID": "Resume.html",
+    "href": "Resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Experience working with"
+  },
+  {
+    "objectID": "Resume.html#i-have-2-resumes-isnt-that-fun.-one-of-these-resumes-highlights-my-more-professional-work-experiences",
+    "href": "Resume.html#i-have-2-resumes-isnt-that-fun.-one-of-these-resumes-highlights-my-more-professional-work-experiences",
+    "title": "Resume",
+    "section": "",
+    "text": "It appears you don’t have a PDF plugin for this browser. No biggie… you can click here to download the PDF file."
+  },
+  {
+    "objectID": "Research Page.html",
+    "href": "Research Page.html",
+    "title": "Research Process",
+    "section": "",
+    "text": "Welcome! Let’s walk you through some of my research experiences.\nDevelopmental Psychopathology Lab Experience:\n\nParticipant Management\n\n*Create a graphic that shows the steps of the recruitment process\nScheduling etc\n\nResearch Presentation\n\nGraphic that shows the process of how I work on research\n\n\nResearch Lead Experience - Age-Friendly University Evaluation at GSU\n\nResearch Protocol Development demonstration\nProject Iteration\nIRB Approval Process\nEtc\n\nCo-Author of Handbook on Sociology of Housing & Health\n\nDemonstrate my research process\nExample of my work here maybe"
+  },
+  {
+    "objectID": "Research Portfolio.html",
+    "href": "Research Portfolio.html",
+    "title": "Research Portfolio",
+    "section": "",
+    "text": "Welcome! I put together this slide deck to demonstrate my research experiences. Check it out and reach out if you have any questions (or need help with a project!)"
+  },
+  {
+    "objectID": "ResearchPortfolio.html",
+    "href": "ResearchPortfolio.html",
+    "title": "Research Portfolio",
+    "section": "",
+    "text": "Welcome! I put together this slide deck to describe my research experiences.\nCheck it out and reach out if you have any questions (or need help with a project!)"
+  },
+  {
+    "objectID": "writings.html#academic-writing",
+    "href": "writings.html#academic-writing",
+    "title": "Writing",
+    "section": "Academic Writing",
+    "text": "Academic Writing\n\nA Summary and Critique of Two Psychology Research Articles (2023)\nSociology: Views of Family and Marriage (2023)\nOriginal Psychology Research Conference Proposal (2023)\nGSU Psychology Research Conference Poster (2023):"
+  },
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Here you can find selected writing samples."
+  },
+  {
+    "objectID": "writing.html#academic-writing",
+    "href": "writing.html#academic-writing",
+    "title": "Writing",
+    "section": "Academic Writing",
+    "text": "Academic Writing\n\nA Summary and Critique of Two Psychology Research Articles (2023)\nSociology: Views of Family and Marriage (2023)\nOriginal Psychology Research Conference Proposal (2023)\nGSU Psychology Research Conference Poster (2023):"
+  },
+  {
+    "objectID": "writing.html#choice-tweets",
+    "href": "writing.html#choice-tweets",
+    "title": "Writing",
+    "section": "Choice Tweets",
+    "text": "Choice Tweets"
+  },
+  {
+    "objectID": "Resume.html#technology-software",
+    "href": "Resume.html#technology-software",
+    "title": "Resume",
+    "section": "Technology & software",
+    "text": "Technology & software"
+  },
+  {
+    "objectID": "Resume.html#experience",
+    "href": "Resume.html#experience",
+    "title": "Resume",
+    "section": "Experience",
+    "text": "Experience"
+  },
+  {
+    "objectID": "Resume.html#education",
+    "href": "Resume.html#education",
+    "title": "Resume",
+    "section": "Education",
+    "text": "Education\n\nBachelor of Arts in Psychology & Sociology - Georgia State University\nMaster of Science in Human-Centered Design & Engineering - University of Washington"
+  },
+  {
+    "objectID": "Resume.html#downloadable-pdf",
+    "href": "Resume.html#downloadable-pdf",
+    "title": "Resume",
+    "section": "Downloadable PDF",
+    "text": "Downloadable PDF"
+  },
+  {
+    "objectID": "Resume.html#skills",
+    "href": "Resume.html#skills",
+    "title": "Resume",
+    "section": "",
+    "text": "Experience working with"
+  },
+  {
+    "objectID": "workprogresslog.html",
+    "href": "workprogresslog.html",
+    "title": "works in progress",
+    "section": "",
+    "text": "What I’ve been working on lately\n\nPublication on the harms and benefits of Generative AI in relation to health outcomes by socioeconomic status.\nHCDE 518 (Fall 2024): Working with a team to develop an AR/VR digital design solutions to prevent car accidents. (Provide a link, images, etc)\nHCDE 501 (Fall 2024): Course focused on theoretical contributions to Human-Computer Interaction. I am examining my own experiences using a sociotechnical feminist lens to explain my relationship to the world, artifacts, and the undoing of endowed agency."
+  }
+]

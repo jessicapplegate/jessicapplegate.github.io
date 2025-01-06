@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Jessica Applegate"
+  google-analytics: "G-XBKCQCB5FH"
+  navbar:
+    left:
+      # - href: index.qmd
+      #   text: Home
+      - about.qmd
+      - ResearchPortfolio.qmd
+      - designs.qmd
+      - writing.qmd
+      - Resume.qmd
+    right: 
+      - icon: linkedin 
+        href: https://www.linkedin.com/in/jessica-applegate-197b6b230/
+      
+      
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - custom.scss
+    # css: styles.css
+    toc: true
+
+
+

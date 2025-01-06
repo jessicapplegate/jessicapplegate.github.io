@@ -1,0 +1,140 @@
+---
+title: "Design Works"
+---
+
+## Here you can find selected designs.
+
+-   Dematic Supplier Diversity Website:
+
+![](images/Screenshot%202023-11-28%20at%201.10.48%E2%80%AFPM.png)
+
+![](images/Screenshot%202023-11-28%20at%201.11.13%E2%80%AFPM.png)
+
+-   Various Pretty R Plots that I've made:
+
+```{r, eval=FALSE}
+#| code-fold: true
+library(sf)
+
+# print out the layes that are available
+st_layers("data/SVI2020_GEORGIA_tract.gdb/")
+
+# read in as sf object
+tracts <- read_sf("data/SVI2020_GEORGIA_tract.gdb", layer = "SVI2020_GEORGIA_tract")
+
+library(showtext)
+font_add_google(name = "Montserrat", family = "Montserrat")
+showtext_auto()
+
+library(tidyverse)
+
+map <- ggplot(tracts, aes(fill = EPL_UNINSUR)) +
+  geom_sf(lwd = 0.15, color = "black")
+
+# we use filter to remove outliers
+tracts %>% 
+  filter(EPL_UNINSUR > -200) %>% 
+  ggplot(aes(fill = EPL_UNINSUR)) +
+  geom_sf(lwd = 0.15, color = "black")
+
+# instead of removing the values, we make the values missing
+tracts %>% 
+  mutate(EPL_UNINSUR = ifelse(EPL_UNINSUR > -200, EPL_UNINSUR, NA)) %>%
+  select(EPL_UNINSUR) %>% 
+  ggplot(aes(fill = EPL_UNINSUR)) +
+  geom_sf(lwd = 0.15, color = "black") +
+  # using pre-defined color scheme
+  scale_fill_viridis_c(option = "viridis") +
+  #specify desired color gradient
+  #scale_fill_gradient(low = "red", high = "yellow") + 
+  theme_minimal() +
+  labs(
+    title = "Percentile Percentage of Uninsured Persons",
+    #subtitle = "Ranking values range from 0 to 1, with higher values indicating greater
+    #vulnerability",
+    caption = "*Data from CDC/ATSDR Social Vulnerability Index (2020)
+    Higher values indicating greater vulnerability", 
+    fill= "Ranking Values"
+  ) + 
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    text = element_text(family = "Montserrat")
+  )
+```
+
+![](images/RplotMappedSVI-01.png){width="700"}
+
+::: callout-note
+Created using data from the 2020 CDC/ATSDR Social Vulnerability Index on Georgia. [SVI Data](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
+:::
+
+```{r, eval=FALSE}
+#| code-fold: true
+library(tidyverse)
+
+cdcdata <- read_csv("data/National_Health_and_Nutrition_Examination_Survey__NHANES__-_National_Cardiovascular_Disease_Surveillance_System.csv")
+
+count(cdcdata, Class, Topic)
+
+overall_heart_disease <- filter(
+  cdcdata, 
+  Topic == "Hypertension",
+  Break_Out_Category == "Overall", 
+  Data_Value_Type == "Age-Standardized",
+  QuestionId != "NH034",
+  QuestionId != "NH024",
+  !is.na(Data_Value)
+)
+
+hd_clean <- separate(overall_heart_disease, YearStart, c("start", "end"), sep = "-") %>%
+  mutate(
+    start = as.numeric(start),
+    end = as.numeric(end)
+  ) %>% 
+  mutate(
+    label = case_when(
+      QuestionId == "NH033" ~ "BP Control among US adults (BP=130/90)",
+      QuestionId == "NH023" ~ "BP Control among US adults (BP=140/90)",
+      QuestionId == "NH030" ~ "Prevalence of HTN (BP=130/90)",
+      QuestionId == "NH020" ~ "Prevalence of HTN (BP=140/90)",
+      QuestionId == "NH031" ~ "HTN awareness among adults with HTN (BP=130/90)",
+      QuestionId == "NH021" ~ "HTN awareness among adults with HTN (BP=140/90)",
+      QuestionId == "NH032" ~ "HTN Medication Use in adults with HTN (BP=130/90)",
+      QuestionId == "NH022" ~ "HTN Medication Use in adults with HTN (BP=140/90)"
+      
+    )
+  )
+
+library(showtext)
+font_add_google(name = "Montserrat", family = "Montserrat")
+showtext_auto()
+
+ggplot(hd_clean, aes(start, Data_Value)) + 
+  geom_smooth(method = "lm", color = "#A3C7D6", fill = "#83A2FF") + 
+  geom_errorbar(
+    aes(ymin = Low_Confidence_Limit, ymax = High_Confidence_Limit), 
+    width = 0.7,
+    color = "#9F73AB"
+  ) + 
+  geom_point(color = "#3F3B6C") +
+  facet_wrap("label", scales = "free_y", ncol = 3) +
+  theme_light() +
+  labs(
+    title = "National Cardiovascular Disease (1999 - 2016)",
+    subtitle = "Data from NHANES provided by CDC",
+    x = "Year", y = "Age Standardized Rate", 
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.0),
+    text = element_text(family = "Montserrat"),
+    strip.background = element_rect(fill = "#3F3B6C")
+  )
+```
+
+![](images/NHANES%20Data%20Viz%20(Applegate).png){width="800"}
+
+::: callout-note
+Created using data from The National Health and Nutrition Examination Survey [(NHANES)](https://data.cdc.gov/Heart-Disease-Stroke-Prevention/National-Health-and-Nutrition-Examination-Survey-N/5svk-8bnq/about_data)
+:::
+
+![](images/Screenshot%202023-11-28%20at%201.14.09%E2%80%AFPM.png){width="500"} ![](images/Screenshot%202023-11-28%20at%201.15.19%E2%80%AFPM.png){width="500"}
