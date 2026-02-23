@@ -1,582 +1,464 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Portfolio &mdash; Jessica Applegate</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jessica Applegate | UX Researcher</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                color: #1a1a1a;
+                -webkit-font-smoothing: antialiased;
+                font-size: 80%; /* Simulate 80% zoom */
+            }
 
-	<!-- 
-	http://freehtml5.co/
- -->
+            nav {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.8);
+            }
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+            h1 {
+                letter-spacing: -0.04em;
+                font-weight: 700;
+            }
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+            /* Framer-style Project Cards */
+            .project-card {
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                border: 1px solid #f1f1f1;
+            }
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+            .project-card:hover {
+                transform: translateY(-8px);
+                border-color: #e2e2e2;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            }
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+            .card-img-container {
+                aspect-ratio: 16/10;
+                overflow: hidden;
+                background-color: #f7f7f7;
+                border-radius: 12px;
+            }
 
-	</head>
-	<body>
-	
-<!-- Header Section -->
-<div class="header-area">
-    <!-- Start Navigation -->
-    <nav class="navbar-default bootsnav navbar-fixed dark no-background on no-full">
-        <div class="container">
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-                <!-- Navbar Toggle for Mobile -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <!-- Brand/Home link -->
-                <a class="navbar-brand" href="index.html">Home</a>
+            .card-img-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s ease;
+            }
+
+            .project-card:hover img {
+                transform: scale(1.03);
+            }
+
+            .tag {
+                background: #f3f4f6;
+                color: #4b5563;
+                padding: 4px 12px;
+                border-radius: 100px;
+                font-size: 0.75rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body class="selection:bg-blue-100 selection:text-blue-900">
+        <nav class="fixed top-0 w-full z-50 py-6">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <a href="#" class="text-xl font-bold tracking-tighter"
+                    >Jessica Applegate</a
+                >
+                <div
+                    class="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-500"
+                >
+                    <a
+                        href="#projects"
+                        class="hover:text-black transition-colors"
+                        >Work</a
+                    >
+                    <a
+                        href="about.html"
+                        class="hover:text-black transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit"
+                        target="_blank"
+                        class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition-all"
+                        >Resume</a
+                    >
+                </div>
             </div>
-            <!-- End Header Navigation -->
+        </nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li><a href="aboutme.html">About</a></li>
-					<li><a href="#fh5co-projects">Projects</a></li>
-					<li><a href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit?usp=sharing&ouid=115004477476037658367&rtpof=true&sd=true">Resume</a></li>
-					<li><a href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"><i class="icon-linkedin2"></i></a></li>
-                </ul><!--/.nav -->
-            </div><!-- /.navbar-collapse -->
-        </div><!--/.container-->
-    </nav><!--/nav-->
-    <!-- End Navigation -->
-</div>
+        <section class="pt-40 pb-24 md:pt-52 md:pb-32">
+            <div class="container mx-auto px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center"
+                >
+                    <div class="md:col-span-2">
+                        <h1 class="text-5xl md:text-7xl mb-8 leading-[1.1]">
+                            UX Researcher &
+                            <span class="text-gray-400">Data Enthusiast.</span>
+                        </h1>
+                        <p
+                            class="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl"
+                        >
+                            I’m Jess—currently researching at
+                            <span class="text-black font-medium">Workiva</span>.
+                            I specialize in bridging the gap between human
+                            stories and technical data.
+                        </p>
+                        <div class="mt-12 flex items-center gap-6">
+                            <a
+                                href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                                target="_blank"
+                                class="text-gray-400 hover:text-black transition-colors text-2xl"
+                            >
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <span
+                                class="text-sm text-gray-400 font-medium tracking-widest uppercase"
+                                >Based in Seattle, WA</span
+                            >
+                        </div>
+                    </div>
 
-		
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/livingroom.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(images/screenshotme.png);"></div>
-							<h1><span>Jessica Applegate</span></h1>
-							<h3><span>UX Researcher @ Workiva / Human-Centered Design & Engineering @ UW</span></h3>
-							<p>
-								<ul class="fh5co-social-icons">
-									<!-- <li><a href="#"><i class="icon-twitter2"></i></a></li> -->
-									<!-- <li><a href="#"><i class="icon-facebook2"></i></a></li> -->
-									<li><a href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"><i class="icon-linkedin2"></i></a></li>
-									<!-- <li><a href="#"><i class="icon-dribbble2"></i></a></li> -->
-								</ul>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+                    <div class="md:col-span-1">
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-4 bg-gray-50 rounded-3xl scale-95 group-hover:scale-100 transition-transform duration-500"
+                            ></div>
+                            <img
+                                src="images/facehead.jpg"
+                                alt="Jessica Applegate"
+                                class="relative rounded-2xl shadow-xl grayscale-[20%] hover:grayscale-0 transition-all duration-500 w-full object-cover aspect-square md:aspect-auto"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<div id="fh5co-about" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>About Me</h2>
-				</div>
-			</div>
-				<div class="row">
-      <!-- Left side: text -->
-      <div class="col-md-6">
-        <h2>Hi!</h2>
-        <p>
-          I'm Jess, a Master's student in Human-Centered Design & Engineering at the University of Washington. I'm a UX Researcher by day at Workiva, cat lady by night. On this site, you will find research works (I'd be happy to talk about my UXR AI projects at Workiva, but I won't be sharing those), R plots, and other things that I have made!
-        </p>
-        <p>
-          I'm also a big sister, lover of digital media, and a gym rat.
-		          </p>
-		<p>
-		   As you peruse, please be mindful that while this isn't the _most_ beautiful website ever, I did make it myself with some help from the internet! If you find something wacky on one of the pages, please let me know :D
-        </p>
+        <section id="projects" class="py-20 border-t border-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <a
+                        href="equipad.html"
+                        class="project-card group block p-4 rounded-3xl bg-white"
+                    >
+                        <div class="card-img-container mb-6">
+                            <img src="images/equipad1.jpeg" alt="EquiPad" />
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold tracking-tight">
+                                EquiPad
+                            </h3>
+                            <div class="flex gap-2">
+                                <span class="tag">UX Research</span>
+                                <span class="tag">Service Design</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Usability study on a patent-pending period product
+                            dispenser for public restrooms.
+                        </p>
+                    </a>
 
-        <ul class="fh5co-social-icons list-inline">
-          <li><a href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"><i class="icon-linkedin2"></i></a></li>
-        </ul>
-      </div>
+                    <a
+                        href="ai-health-outcomes.html"
+                        class="project-card group block p-4 rounded-3xl bg-white"
+                    >
+                        <div class="card-img-container mb-6">
+                            <img
+                                src="images/chlor_us_map.jpeg"
+                                alt="AI Health"
+                            />
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold tracking-tight">
+                                AI & Health
+                            </h3>
+                            <div class="flex gap-2">
+                                <span class="tag">Data Science</span>
+                                <span class="tag">Statistics</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Spatial analysis of AI-healthcare infrastructure and
+                            rural community health.
+                        </p>
+                    </a>
 
-      <!-- Right side: image -->
-      <div class="col-md-6 text-center">
-        <img src="images/jesstable.jpg" alt="picture of girl on table" class="img-responsive img-rounded">
-      </div>
-    </div>
-  </div>
-</div>
+                    <a
+                        href="workiva.html"
+                        class="project-card group block p-4 rounded-3xl bg-white"
+                    >
+                        <div class="card-img-container mb-6">
+                            <img src="images/workiva.png" alt="Workiva" />
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold tracking-tight">
+                                Workiva
+                            </h3>
+                            <div class="flex gap-2">
+                                <span class="tag">Enterprise UXR</span>
+                                <span class="tag">AI</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            [Password Protected] — Optimizing AI-powered
+                            financial workflows.
+                        </p>
+                    </a>
 
-	<div id="fh5co-resume" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>My Resume</h2>
-					<!-- Link to a website under "My Resume" -->
-					<a href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit?usp=sharing&ouid=115004477476037658367&rtpof=true&sd=true" target="_blank" class="btn btn-primary">PDF version</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Work Experience</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">User Experience Research Intern</h3>
-									<span class="company"> Workiva - May 2025 - Current</span>
-								</div>
-								<div class="timeline-body">
-									<p>UXR on the AI/ML Team at Workiva. Lead on Platform expansion of Workiva AI. Works closly with data tier, PM Org, and Engineering to create tools that are informed by my research.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Research Assistant</h3>
-									<span class="company">UW Medicine, Equity Office - 2024 - Current</span>
-								</div>
-								<div class="timeline-body">
-									<p>Collaborator on the Equity Blueprint 3.0, integrating participatory design and user-centered research
-										approaches.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">UX Researcher & Project Manager</h3>
-									<span class="company">HCDE Project- 10/2024 - 12/2024</span>
-								</div>
-								<div class="timeline-body">
-									<p>Delivered an end-to-end UX research project for an AR/VR concept in a 10-week Agile sprint.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Research Lead</h3>
-									<span class="company">Georgia State University - 2023 - 2024</span>
-								</div>
-								<div class="timeline-body">
-									<p>Executed a funded study with GSU’s Gerontology Institute to evaluate age-friendly supports and barriers
-										using qualitative methods.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Research Assistant</h3>
-									<span class="company">Georgia State University - 01/2023 - 01/2024 </span>
-								</div>
-								<div class="timeline-body">
-									<p>Managed participant recruitment, scheduling, and logistics to ensure smooth research processeses.
-									<p>Updated behavioral tasks as needed, assisted during preliminary participant assessments, and recorded research sessions for subsequent coding.</p>
-									<p> Visualized and presented data using R at GSU’s Psychology Research Conference (2023)</p>
-										</p>
-								</div>
-							</div>
-						</li>
+                    <a
+                        href="augmenta.html"
+                        class="project-card group block p-4 rounded-3xl bg-white"
+                    >
+                        <div class="card-img-container mb-6">
+                            <img src="images/augmenta.png" alt="Augmenta" />
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold tracking-tight">
+                                Augmenta
+                            </h3>
+                            <div class="flex gap-2">
+                                <span class="tag">AR/VR Concept</span>
+                                <span class="tag">UW HCDE Project</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Voice-activated AR/VR windshield design to reduce
+                            driver cognitive load.
+                        </p>
+                    </a>
 
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Master's in Human-Cenetered Design & Engineering</h3>
-									<span class="company">University of Washington - 2024 - 2026</span>
-								</div>
-								<div class="timeline-body">
-									<p>Relevant Courses: User-Centered Design, Usability Studies,
-										Experimental Research Methods, Visual Communication, </p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Bachelor's in Psychology, minor Sociology</h3>
-									<span class="company">Georgia State University - 2018 - 2024</span>
-								</div>
-								<div class="timeline-body">
-									<p>Graduated Summa Cum Laude</p>
-									
-									<p>Honors Coursework: </p>
-										<p> Advanced Research Design & Analysis, Psychopathology & Abnormal Psychology, Sociology of Health & Illness, 
-										Cross-Cultural Psychology, Psychology of Aging
-									</p>
-								</div>
-							</div>
-						</li>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+                    <a
+                        href="shape-joy.html"
+                        class="project-card group block p-4 rounded-3xl bg-white"
+                    >
+                        <div class="card-img-container mb-6">
+                            <img
+                                src="images/shape-joy-poster.jpeg"
+                                alt="Shape Joy"
+                            />
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold tracking-tight">
+                                SHAPE JOY
+                            </h3>
+                            <div class="flex gap-2">
+                                <span class="tag">Behavioral Analysis</span>
+                                <span class="tag">Social Science</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Longitudinal study on empathic joy interventions in
+                            children.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-	<div id="fh5co-features" class="animate-box">
-		<div class="container">
-			<div class="services-padding">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Expertise</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-search"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Research</h3>
-								<p>Skilled researcher with 3 years of experience.</p>
-							</div>
-						</div>
-					</div>
+        <section
+            id="recommendations"
+            class="py-20 bg-gray-50 border-t border-gray-100"
+        >
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">
+                    Recommendations
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div class="bg-white p-6 rounded-2xl shadow-sm">
+                        <blockquote class="text-gray-600 italic mb-6 text-md">
+                            "I worked closely with Jessica throughout her
+                            internship on the UXR team at Workiva. From the
+                            start,
+                            <strong
+                                >she consistently showed up thoughtful,
+                                prepared, and ready to contribute.
+                            </strong>
+                            Jessica has a strong growth mindset and was always
+                            eager to learn. She asked sharp questions, came to
+                            the table with ideas, and actively sought feedback
+                            to improve. What stood out most was her
+                            <strong> ability to navigate ambiguity.</strong> She
+                            could be dropped into a new space, quickly get up to
+                            speed, and propose clear, practical next steps. She
+                            executes with a high level of detail and care while
+                            still keeping the broader context in mind. Beyond
+                            her work, she is genuinely loved by the team. She
+                            collaborated easily, got along well with everyone,
+                            and brought a positive energy to the group. I would
+                            strongly recommend Jessica to any team looking for
+                            someone who is curious, reliable, and quick to
+                            grow."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-grey-100 flex items-center justify-center mr-4"
+                            >
+                                <div
+                                    class="w-12 h-12 rounded-full overflow-hidden mr-4"
+                                >
+                                    <img
+                                        src="images/max.jpeg"
+                                        alt="Max Wechlser-Azen"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">
+                                    Max Wechlser-Azen
+                                </p>
+                                <p class="text-gray-500 text-md">
+                                    Staff User Expereince Researcher, Workiva
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md">
+                        <blockquote class="text-gray-600 italic mb-6 text-md">
+                            "I’ve had the pleasure of working with Jess over the
+                            past year at Workiva, where she’s been a Research
+                            Intern — and to say
+                            <strong>
+                                she performs above her level would be an
+                                understatement.</strong
+                            >
+                            Jess is adept across a wide range of research
+                            methods and brings a level of
+                            <strong>
+                                rigor and thoughtfulness you’d expect from a
+                                much more tenured researcher.</strong
+                            >
+                            She’s fluent in stakeholder management, confidently
+                            partners with cross-functional teams, and has the
+                            judgment to identify, shape, and run studies
+                            independently. She doesn’t wait to be told what to
+                            do — she sees the opportunity, crafts the approach,
+                            and delivers meaningful insights. Beyond her skill
+                            set, Jess is a
+                            <strong>
+                                witty, engaged, and genuinely fun teammate. She
+                                raises the bar while also making the work
+                                enjoyable.</strong
+                            >
+                            I truly enjoy collaborating with her. Jess should be
+                            on anyone’s shortlist when hiring researchers. She’s
+                            an incredibly valuable addition to any team and has
+                            a very bright future ahead of her."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-grey-100 flex items-center justify-center mr-4"
+                            >
+                                <div
+                                    class="w-12 h-12 rounded-full overflow-hidden mr-4"
+                                >
+                                    <img
+                                        src="images/molly.jpeg"
+                                        alt="Molly Rempe"
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">
+                                    Molly Rempe
+                                </p>
+                                <p class="text-gray-500 text-md">
+                                    Senior Staff User Experience Researcher,
+                                    Workiva
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm">
+                        <blockquote class="text-gray-600 italic mb-6 text-md">
+                            "During our time together Jessica has proved to be
+                            bright, inquisitive and diligent in her work, except
+                            of course when she was in diapers, or going through
+                            puberty, and then she was a complete nightmare. Her
+                            collaboration and leadership skills are truly
+                            impressive, except when she refused to allow any
+                            visiting child to touch her things, screaming “MINE”
+                            at the top of her lungs. I am happy to report this
+                            habit did abate by the time she was fourteen.
+                            <br /><br />In closing, please hire Jessica if you
+                            need someone to fix the internet, run the company,
+                            or call her mother back—she’s the one. Please hire
+                            her immediately before I order her home to take over
+                            my life, because I miss her so much.
+                            <br /><br />Feel free to call me. I also have baby
+                            pictures."
+                        </blockquote>
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 rounded-full overflow-hidden bg-purple-100 flex items-center justify-center mr-4"
+                            >
+                                <img
+                                    src="images/mom.jpeg"
+                                    alt="Suzanne Applegate"
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">My Mom</p>
+                                <p class="text-gray-500 text-sm">
+                                    The person who made me this way
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-presentation"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Data Visualization & Analysis</h3>
-								<p>I work mainly with R for all things data-related.</p>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-toolbox"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>UX Methodologies</h3>
-								<p>As a student of UX, I'm constantly expanding my UX toolkit and skillset.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- WORK / PROJECTS SECTION -->
-<div id="fh5co-projects" class="animate-box">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-        <h2>Work</h2>
-        <p>Projects that I've worked on:</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <!-- EquiPad -->
-      <div class="col-md-2 col-sm-6">
-        <div class="card" style="margin-bottom: 30px; display: flex; flex-direction: column; height: 100%;">
-          <a href="equipad.html" class="work" style="display: block; height: 200px; background-image: url('images/equipad1.jpeg'); background-size: cover; background-position: center; flex-shrink: 0;"></a>
-          <div class="card-body text-center" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-            <h3>EquiPad</h3>
-            <p>Usability Testing a new period product dispenser.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Augmenta -->
-      <div class="col-md-2 col-sm-6">
-        <div class="card" style="margin-bottom: 30px; display: flex; flex-direction: column; height: 100%;">
-          <a href="https://sites.google.com/uw.edu/augmentaproject/home" class="work" style="display: block; height: 200px; background-image: url('images/augmenta.png'); background-size: cover; background-position: center; flex-shrink: 0;"></a>
-          <div class="card-body text-center" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-            <h3>Augmenta</h3>
-            <p>UX Agile Sprint (links to different page)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- AI & Health Outcomes -->
-      <div class="col-md-2 col-sm-6">
-        <div class="card" style="margin-bottom: 30px; display: flex; flex-direction: column; height: 100%;">
-          <a href="aihealth.html" class="work" style="display: block; height: 200px; background-image: url('images/map_obese_hospitalswithAI.jpeg'); background-size: cover; background-position: center; flex-shrink: 0;"></a>
-          <div class="card-body text-center" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-            <h3>AI & Health Outcomes</h3>
-            <p>Directed Research Project</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- R Plots -->
-      <div class="col-md-2 col-sm-6">
-        <div class="card" style="margin-bottom: 30px; display: flex; flex-direction: column; height: 100%;">
-          <a href="rplotspage.html" class="work" style="display: block; height: 200px; background-image: url('images/unnamed-chunk-4-1.png'); background-size: cover; background-position: center; flex-shrink: 0;"></a>
-          <div class="card-body text-center" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-            <h3>R Plots</h3>
-            <p>Self-led research projects</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- SHAPE JOY -->
-      <div class="col-md-2 col-sm-6">
-        <div class="card" style="margin-bottom: 30px; display: flex; flex-direction: column; height: 100%;">
-          <a href="test.html" class="work" style="display: block; height: 200px; background-image: url('images/gsupsych.png'); background-size: cover; background-position: center; flex-shrink: 0;"></a>
-          <div class="card-body text-center" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-            <h3>SHAPE JOY</h3>
-            <p>Developmental Psychology Study</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Age-Friendly University -->
-      <div class="col-md-2 col-sm-6">
-        <div class="card" style="margin-bottom: 30px; display: flex; flex-direction: column; height: 100%;">
-          <a href="afu2024.html" class="work" style="display: block; height: 200px; background-image: url('images/afu_logo1.jpg'); background-size: cover; background-position: center; flex-shrink: 0;"></a>
-          <div class="card-body text-center" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-            <h3>Age-Friendly University</h3>
-            <p>Participatory Research Project</p>
-          </div>
-        </div>
-      </div>
-    </div> <!-- /row -->
-  </div> <!-- /container -->
-</div> <!-- /fh5co-projects -->
-
-
-
-
-	
-	
-				<!-- <div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-6.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-7.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-8.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div> -->
-			</div>
-		</div>
-	</div>
-
-	<div id="fh5co-blog">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>LinkedIn Posts</h2>
-					<p>Recent and notable posts on my LinkedIn.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="https://www.linkedin.com/posts/jessica-applegate_r-spatialregression-research-activity-7279550315903819776-VcLL?utm_source=share&utm_medium=member_desktop" 
-						class="blog-bg" style="background-image: url(images/spatial_regression.jpeg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">January 2025</span>
-							<h3><a href="https://www.linkedin.com/posts/jessica-applegate_r-spatialregression-research-activity-7279550315903819776-VcLL?utm_source=share&utm_medium=member_desktop">AI & Health Outcomes</a></h3>
-							<p>Using R, I performed a spatial analysis to examine the impacts of AI on health outcomes across the country.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>16</li>
-								<li><i class="icon-eye2"></i>714</li>
-								<li><a href="https://www.linkedin.com/posts/jessica-applegate_r-spatialregression-research-activity-7279550315903819776-VcLL?utm_source=share&utm_medium=member_desktop">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="https://www.linkedin.com/posts/jessica-applegate_a-huge-thank-you-to-brooks-running-user-activity-7262145826569756674-UuI9?utm_source=share&utm_medium=member_desktop" 
-						class="blog-bg" style="background-image: url(images/PATH.jpeg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">December 2024</span>
-							<h3><a href="https://www.linkedin.com/posts/jessica-applegate_a-huge-thank-you-to-brooks-running-user-activity-7262145826569756674-UuI9?utm_source=share&utm_medium=member_desktop">Touring the Brooks & PATH Offices</a></h3>
-							<p>My graduate program afforded me the opportunity to tour offices around Seattle. I got to learn about the work teams at Brooks & PATH teams are doing and how they use HCI & Human-Centered Design in their work.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>8</li>
-								<li><i class="icon-eye2"></i>559</li>
-								<li><a href="https://www.linkedin.com/posts/jessica-applegate_a-huge-thank-you-to-brooks-running-user-activity-7262145826569756674-UuI9?utm_source=share&utm_medium=member_desktop">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="https://www.linkedin.com/posts/jessica-applegate_frontenddevelopment-html-css-activity-7280717316743409665-80ZU?utm_source=share&utm_medium=member_desktop" 
-						class="blog-bg" style="background-image: url(images/3horsemenoftheapocalypse.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">January 2025</span>
-							<h3><a href="https://www.linkedin.com/posts/jessica-applegate_frontenddevelopment-html-css-activity-7280717316743409665-80ZU?utm_source=share&utm_medium=member_desktop">My Journey into Front-End Development</a></h3>
-							<p>Quick LinkedIn post about my experience so far building this website and learning about Front-End Development!</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>3</li>
-								<li><i class="icon-eye2"></i>180</li>
-								<li><a href="https://www.linkedin.com/posts/jessica-applegate_frontenddevelopment-html-css-activity-7280717316743409665-80ZU?utm_source=share&utm_medium=member_desktop">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	 <!-- <div id="fh5co-started" class="fh5co-bg-dark">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Hire Me!</h2>
-					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-					<p><a href="#" class="btn btn-default btn-lg">Contact Us</a></p>
-				</div> -->
-			</div>
-		</div>
-	</div>
-
-	<!-- <div id="fh5co-consult">
-		<div class="video fh5co-video" style="background-image: url(images/cover_bg_1.jpg);">
-			<div class="overlay"></div>
-		</div>
-		<div class="choose animate-box">
-			<h2>Contact</h2>
-			<form action="#">
-				<div class="row form-group">
-					<div class="col-md-6">
-						<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-					</div>
-				</div>
-				<div class="row form-group">
-					<div class="col-md-6">
-						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-					</div>
-				</div>
-
-				<div class="row form-group">
-					<div class="col-md-12">
-						<input type="text" id="email" class="form-control" placeholder="Your email address">
-					</div>
-				</div>
-
-				<div class="row form-group">
-					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-					</div>
-				</div>
-
-				<div class="row form-group">
-					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
-					</div>
-				</div>
-				<div class="form-group">
-					<input type="submit" value="Send Message" class="btn btn-primary">
-				</div>
-
-			</form>	
-		</div>
-	</div>
-
-	 <div id="map" class="fh5co-map"></div>
-	</div>
-	
-	<div id="fh5co-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>&copy; Jessica Applegate <br>Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.com" target="_blank">Unsplash</a></p>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Easy PieChart -->
-	<script src="js/jquery.easypiechart.min.js"></script>
-	
-	<!-- Main -->
-	<script src="js/main.js"></script>
-
-	</body>
+        <footer class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">Let's Connect!</h2>
+                <div
+                    class="flex justify-center space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500"
+                >
+                    <a
+                        href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                        class="hover:text-black transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="mailto:jessicapplegate@gmail.com"
+                        class="hover:text-black transition-colors"
+                        >Email</a
+                    >
+                </div>
+                <p class="mt-12 text-gray-400 text-sm">
+                    &copy; 2026 Jessica Applegate.
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>
-

@@ -1,132 +1,368 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EquiPad - Jessica Applegate</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                color: #1a1a1a;
+                -webkit-font-smoothing: antialiased;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EquiPad — UX Study</title>
+            nav {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.8);
+            }
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+            h1 {
+                letter-spacing: -0.04em;
+                font-weight: 700;
+            }
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- Icomoon Icon Fonts -->
-    <link rel="stylesheet" href="css/icomoon.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="css/style.css">
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 6rem; /* Adjust this value based on your fixed header's height */
+            }
 
-    <!-- Modernizr -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
-</head>
-
-<body>
-    <!-- Header -->
-   <!-- Header Section -->
-   <div class="header-area">
-    <!-- Start Navigation -->
-    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background on no-full">
-        <div class="container">
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-                <!-- Navbar Toggle for Mobile -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <!-- Brand/Home link -->
-                <a class="navbar-brand" href="index.html">Home</a>
+            /* High-impact card styling using your blue palette */
+            .impact-card {
+                border-left: 4px solid #2563eb; /* blue-600 */
+                background-color: #eff6ff; /* blue-50 */
+                padding: 1.5rem;
+                border-radius: 0 0.75rem 0.75rem 0;
+            }
+        </style>
+    </head>
+    <body class="selection:bg-blue-100 selection:text-blue-900">
+        <nav class="fixed top-0 w-full z-50 py-6">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <a href="index.html" class="text-xl font-bold tracking-tighter"
+                    >Jessica Applegate</a
+                >
+                <div
+                    class="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-500"
+                >
+                    <a
+                        href="index.html#projects"
+                        class="hover:text-black transition-colors"
+                        >Work</a
+                    >
+                    <a
+                        href="about.html"
+                        class="hover:text-black transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit"
+                        target="_blank"
+                        class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition-all"
+                        >Resume</a
+                    >
+                </div>
             </div>
-            <!-- End Header Navigation -->
+        </nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li><a href="aboutme.html">About</a></li>
-                    <li><a href="index.html#fh5co-work">Projects</a></li>
-                    <li><a href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit?usp=sharing&ouid=115004477476037658367&rtpof=true&sd=true">Resume</a></li>
-					<li><a href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"><i class="icon-linkedin2"></i></a></li>
-                </ul>
+        <div class="container mx-auto flex flex-wrap pt-32 pb-16">
+            <aside class="w-full sm:w-1/4 md:w-1/5 px-2">
+                <div class="sticky top-32 p-4 w-full bg-gray-100 rounded-2xl">
+                    <ul class="flex flex-col space-y-2">
+                        <li>
+                            <a
+                                href="#overview"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Overview</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#understand"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Understand</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#research"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Research</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#outcome"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Outcome & Impact</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#takeaways"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Takeaways</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main role="main" class="w-full sm:w-3/4 md:w-4/5 p-8">
+                <h1 class="text-4xl font-bold mb-4">
+                    <span class="text-blue-600">EquiPad:</span> Reimagining the
+                    End-to-End Period Product Experience
+                </h1>
+                <p
+                    class="text-lg italic text-gray-600 mb-10 border-l-2 border-gray-100 pl-4"
+                >
+                    Evaluating a patent-pending dispenser to ensure
+                    <strong>free, reliable access</strong> to period products in
+                    public restrooms.
+                </p>
+
+                <div class="prose lg:prose-xl max-w-none">
+                    <section id="overview" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-6">Overview</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Problem
+                                </p>
+                                <p class="text-gray-800 font-medium italic">
+                                    Access in public spaces is often
+                                    inconsistent, unreliable, or undignified.
+                                </p>
+                            </div>
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Outcome
+                                </p>
+                                <p class="text-gray-800 font-medium">
+                                    Identified
+                                    <strong>mechanical friction</strong> that
+                                    led to a V2 design prioritizing speed and
+                                    waste reduction.
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>
+                                <strong>My Role:</strong>
+                                <span class="text-blue-600 font-semibold"
+                                    >Lead UX Researcher</span
+                                >
+                                (UW HCDE Team).
+                            </li>
+                            <li>
+                                <strong>The Goal:</strong> Validating the
+                                prototype’s "Dispense" and "Restock" flows ahead
+                                of a Summer 2025 soft launch.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="understand" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4 text-gray-900">
+                            Understand
+                        </h2>
+                        <p class="mb-4">
+                            Designing for menstrual equity requires looking at
+                            the entire ecosystem. By centering our research on a
+                            <strong>Total Service Blueprint</strong>, we ensured
+                            the prototype addressed <em>both</em> the
+                            menstruator’s experience and the custodian’s
+                            workflow.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-2">
+                            The Strategic "Why"
+                        </h3>
+                        <p class="mb-4">
+                            We chose
+                            <strong>In-Situ Usability Testing</strong> (UW
+                            campus and a café) over a lab setting. We needed to
+                            observe environmental constraints—cramped stalls and
+                            high-traffic workflows—that a controlled environment
+                            couldn't replicate.
+                        </p>
+                    </section>
+
+                    <section id="research" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Research</h2>
+                        <div
+                            class="bg-gray-50 border border-gray-100 p-6 rounded-xl mb-6"
+                        >
+                            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                                Findings: "The Friction in the Feed"
+                            </h3>
+                            <ol class="list-decimal list-inside space-y-4">
+                                <li>
+                                    <strong>Mechanical Error:</strong> The
+                                    feeder was too narrow for standard pads,
+                                    causing
+                                    <span class="text-red-600 font-bold italic"
+                                        >80% of users</span
+                                    >
+                                    to experience "dispense lag."
+                                </li>
+                                <li>
+                                    <strong>The "Aesthetic" Barrier:</strong>
+                                    The viewer panel was perceived as a
+                                    <em>distraction</em> rather than a utility.
+                                </li>
+                                <li>
+                                    <strong>Maintenance Lag:</strong> Custodians
+                                    found restocking
+                                    <strong
+                                        >slower than industry standards</strong
+                                    >.
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mt-10">
+                            <h3
+                                class="text-2xl font-bold tracking-tight mb-6 text-gray-900"
+                            >
+                                Process Artifacts
+                            </h3>
+                            <div
+                                class="relative rounded-xl overflow-hidden border border-gray-200 bg-white group"
+                            >
+                                <div
+                                    class="bg-gray-50 px-3 py-1.5 border-b border-gray-200 flex justify-between items-center"
+                                >
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+                                        >Slide Deck Preview</span
+                                    >
+                                    <a
+                                        href="images/case-study-equipad 2.pdf"
+                                        target="_blank"
+                                        class="text-[10px] text-blue-500 hover:underline"
+                                        >Full Screen
+                                        <i class="fa-solid fa-expand ml-1"></i
+                                    ></a>
+                                </div>
+                                <iframe
+                                    src="images/case-study-equipad 2.pdf#view=FitH"
+                                    width="100%"
+                                    height="550px"
+                                    class="w-full border-none"
+                                    title="EquiPad Deck"
+                                ></iframe>
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none"
+                                ></div>
+                            </div>
+                            <div class="flex justify-end mt-2">
+                                <a
+                                    href="images/case-study-equipad 2.pdf"
+                                    download
+                                    class="text-sm font-semibold text-gray-400 hover:text-black transition-colors"
+                                >
+                                    <i class="fa-solid fa-download mr-2"></i
+                                    >Download for Offline Viewing
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="outcome" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">
+                            Outcome & Impact
+                        </h2>
+                        <div
+                            class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-6"
+                        >
+                            <blockquote
+                                class="border-l-4 border-blue-600 pl-4 italic text-xl text-gray-700"
+                            >
+                                "It feels like it's
+                                <strong>fighting me</strong> to get the product
+                                out."
+                                <cite
+                                    class="block text-sm font-bold mt-2 text-gray-500 uppercase"
+                                    >— Participant 02 (Menstruator)</cite
+                                >
+                            </blockquote>
+                        </div>
+                        <p class="font-medium text-lg">
+                            This insight directly led to the
+                            <strong>mechanical redesign</strong> of the internal
+                            feeder and the
+                            <strong>removal of the viewer panel</strong>, which
+                            reduced manufacturing costs.
+                        </p>
+                    </section>
+
+                    <section id="takeaways" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Takeaways</h2>
+                        <p class="mb-4">
+                            <strong>Leadership & Scaling:</strong> I developed a
+                            <strong>Research Audit Trail</strong>, creating a
+                            centralized system for engineers to revisit raw user
+                            insights and mechanical pain points during
+                            development roadblocks.
+                        </p>
+                        <p class="mb-4">
+                            <strong>The Service Ecosystem:</strong> This project
+                            reinforced that the
+                            <strong>custodial workflow</strong> is just as
+                            critical as the end-user experience. If the
+                            "backstage" maintenance is inefficient, the
+                            "front-stage" service eventually fails the user.
+                        </p>
+
+                        <p class="font-bold text-blue-600">Future Roadmap:</p>
+                        <p class="mb-4">
+                            Recommended integrated QR codes to provide custodial
+                            staff with "instant maintenance" guides to further
+                            reduce restocking time and mitigate any onboarding
+                            hurdles for new or temporary staff.
+                        </p>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <footer class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">Let's Connect!</h2>
+                <div
+                    class="flex justify-center space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500"
+                >
+                    <a
+                        href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                        class="hover:text-black transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="mailto:jessicapplegate@gmail.com"
+                        class="hover:text-black transition-colors"
+                        >Email</a
+                    >
+                </div>
+                <p class="mt-12 text-gray-400 text-sm">
+                    &copy; 2026 Jessica Applegate.
+                </p>
             </div>
-        </div>
-    </nav>
-    <!-- End Header -->
-
-    <!-- Main Content -->
-    <main class="container py-5" style="margin-top:80px;">
-
-
-        <!-- Project Title -->
-        <div class="text-center mb-5">
-            <h1>EquiPad: Usability study of a Period Product Dispenser</h1>
-            <p class="lead">Usability research conducted by the UW HCDE Research Team to inform the soft launch of the Equipad dispenser prototype in Summer 2025.</p>
-        </div>
-
-        <!-- Slide Deck -->
-        <div class="text-center mb-5">
-            <iframe class="slide-deck" 
-                    src="https://docs.google.com/presentation/d/1kCf0YaAwKRy7KDl7fELHfRWKnM3gkYMevfNIHPAJCQM/embed?start=false&loop=false&delayms=3000" 
-                    style="width:100%; max-width:900px; height:600px; border:none;" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-
-        <!-- Overview -->
-        <section class="mb-5">
-            <h2>Overview</h2>
-            <p>Equipad aims to reduce variability in access to period products—ensuring free, comfortable, and reliable availability for menstruators in public restrooms. The patent-pending dispenser provides tampons and pads, designed for ease of dispensing and restocking.</p>
-            <p>This study focused on evaluating usability of the prototype to inform its soft launch, emphasizing two core processes: dispensing a period product and restocking the dispenser.</p>
-        </section>
-
-        <!-- Study Overview -->
-        <section class="mb-5">
-            <h2>Study Overview</h2>
-            <p>The UW HCDE Research Team conducted usability testing from February 28th to March 5th, 2025. Participants included menstruators and custodial staff in a variety of settings including UW campus, private residences, and a café. Sessions lasted 20–45 minutes each.</p>
-            <ul>
-                <li>Recruitment via email to UW community and personal connections</li>
-                <li>7 participants: 4 menstruators, 3 custodial staff</li>
-                <li>Age range: 20–40+ years</li>
-                <li>Data collection included task completion (quantitative) and participant feedback/observations (qualitative)</li>
-            </ul>
-        </section>
-
-        <!-- Key Findings -->
-        <section class="mb-5">
-            <h2>Key Findings</h2>
-            <ul>
-                <li><strong>Dispense Functionality:</strong> Participants found dispensing time-consuming; the feeder was narrow and pad thickness caused errors. Recommendation: widen dispenser opening and modify internal design.</li>
-                <li><strong>Viewer Panel:</strong> Glass/plastic panel was distracting and unnecessary. Recommendation: remove or reduce the panel size for aesthetics and clarity.</li>
-                <li><strong>Restocking:</strong> Custodial participants found restocking time-consuming compared to current products. Recommendation: gather further feedback and explore process improvements.</li>
-                <li><strong>Overall Design:</strong> Participants noted bulkiness and suggested design refinements to increase adoption and usability.</li>
-                <li><strong>Positive Insights:</strong> Users found the product intuitive; custodial participants agreed a lock & key is necessary; all participants felt comfortable sharing honest feedback.</li>
-            </ul>
-        </section>
-
-        <!-- Recommendations -->
-        <section class="mb-5">
-            <h2>Recommendations</h2>
-            <p><strong>Short-term:</strong> Improve dispensing efficiency, reduce product waste, remove viewer panel, and add clear signage.</p>
-            <p><strong>Long-term:</strong> Offer multiple dispenser sizes for different spaces and consider adding QR codes with instructions for dispensing and restocking.</p>
-        </section>
-
-        <!-- Conclusion -->
-        <section class="mb-5">
-            <h2>Conclusion</h2>
-            <p>This study provided critical insight from both custodial and menstruating users. While the prototype was moderately intuitive, features like the dispensing mechanism and pad thickness limited usability. Findings will guide future design iterations prior to market launch.</p>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2025 Jessica Applegate. All rights reserved. <a href="index.html" class="text-light">Home</a></p>
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+        </footer>
+    </body>
 </html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About - Jessica Applegate</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                color: #1a1a1a;
+                -webkit-font-smoothing: antialiased;
+            }
+            nav {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            h1 {
+                letter-spacing: -0.04em;
+                font-weight: 700;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body class="selection:bg-blue-100 selection:text-blue-900">
+        <nav class="fixed top-0 w-full z-50 py-6">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <a href="index.html" class="text-xl font-bold tracking-tighter"
+                    >Jessica Applegate</a
+                >
+                <div
+                    class="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-500"
+                >
+                    <a
+                        href="index.html#projects"
+                        class="hover:text-black transition-colors"
+                        >Work</a
+                    >
+                    <a
+                        href="about.html"
+                        class="hover:text-black transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit"
+                        target="_blank"
+                        class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition-all"
+                        >Resume</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <section class="pt-40 pb-24 md:pt-52 md:pb-32">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <!-- Image Collage Column -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-2">
+                            <img
+                                src="images/jesstable.jpg"
+                                alt="Jessica at a table"
+                                class="shadow-lg w-full object-cover aspect-[4/3]"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="images/jebnjosi.jpg"
+                                alt="Jessica and a friend"
+                                class="shadow-lg w-full object-cover aspect-square"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="images/image10.jpeg"
+                                alt="two cats in a tub"
+                                class="shadow-lg w-full object-cover aspect-square"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Text Content Column -->
+                    <div class="prose lg:prose-xl max-w-none space-y-8">
+                        <h1 class="text-5xl md:text-6xl mb-8 text-blue-800">
+                            About Me
+                        </h1>
+
+                        <p>
+                            I'm <strong>Jess</strong>, a Master's student in
+                            <strong
+                                >Human-Centered Design & Engineering
+                                (HCDE)</strong
+                            >
+                            at the University of Washington. I'm a
+                            <strong>UX Researcher</strong> by day at
+                            <strong>Workiva</strong>, and a cat lady by night.
+                        </p>
+
+                        <p>
+                            Before diving into research, I got my 'professional'
+                            start in the high-pressure world of
+                            restaurants—working front of house at award winning
+                            taquerias and Michelin-starred fine-dining
+                            institutions.
+                        </p>
+
+                        <p>
+                            I'm originally from Georgia, but have lived in 5 US
+                            states! Reach out if you want restaurant recs in
+                            Portland, ME, Richmond, VA, Atlanta, GA, or in
+                            Seattle, WA.
+                        </p>
+
+                        <h3 class="font-bold text-2xl mt-12 mb-4 text-blue-800">
+                            Beyond Work
+                        </h3>
+                        <ul class="list-disc list-inside">
+                            <p>
+                                I’m in the gym at least four days a week or
+                                playing mermaid (I started swimming competitvely
+                                in 3rd grade!) I'm a proud 'cat mom' to Juice
+                                and Onion, who (unsuccessfully) try to help me
+                                with my research and a recent newlywed to Josiah
+                                who tries to (unsuccessfully) fold our laundry.
+                            </p>
+                        </ul>
+
+                        <h2 class="font-bold text-3xl mt-16 mb-6 text-blue-800">
+                            Contact
+                        </h2>
+                        <ul class="list-none space-y-2">
+                            <li>
+                                <strong>Email:</strong>
+                                <a href="mailto:jessicapplegate@gmail.com"
+                                    >jessicapplegate@gmail.com</a
+                                >
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <a
+                                    href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                                    target="_blank"
+                                    class="text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2"
+                                >
+                                    <i
+                                        class="fa-brands fa-linkedin text-xl"
+                                    ></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">Let's Connect!</h2>
+                <div
+                    class="flex justify-center space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500"
+                >
+                    <a
+                        href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                        class="hover:text-black transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="mailto:jessicapplegate@gmail.com"
+                        class="hover:text-black transition-colors"
+                        >Email</a
+                    >
+                </div>
+                <p class="mt-12 text-gray-400 text-sm">
+                    &copy; 2026 Jessica Applegate.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

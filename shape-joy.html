@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SHAPE JOY - Jessica Applegate</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                color: #1a1a1a;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            nav {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            h1 {
+                letter-spacing: -0.04em;
+                font-weight: 700;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 6rem; /* Adjust this value based on your fixed header's height */
+            }
+
+            /* High-impact card styling using your blue palette */
+            .impact-card {
+                border-left: 4px solid #2563eb; /* blue-600 */
+                background-color: #eff6ff; /* blue-50 */
+                padding: 1.5rem;
+                border-radius: 0 0.75rem 0.75rem 0;
+            }
+        </style>
+    </head>
+    <body class="selection:bg-blue-100 selection:text-blue-900">
+        <nav class="fixed top-0 w-full z-50 py-6">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <a href="index.html" class="text-xl font-bold tracking-tighter"
+                    >Jessica Applegate</a
+                >
+                <div
+                    class="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-500"
+                >
+                    <a
+                        href="index.html#projects"
+                        class="hover:text-black transition-colors"
+                        >Work</a
+                    >
+                    <a
+                        href="about.html"
+                        class="hover:text-black transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit"
+                        target="_blank"
+                        class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition-all"
+                        >Resume</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mx-auto flex flex-wrap pt-32 pb-16">
+            <!-- Side Navigation -->
+            <aside class="w-full sm:w-1/4 md:w-1/5 px-2">
+                <div class="sticky top-32 p-4 w-full bg-gray-100 rounded-2xl">
+                    <ul class="flex flex-col space-y-2">
+                        <li>
+                            <a
+                                href="#overview"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Overview</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#understand"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Understand</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#research"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Research</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#outcome"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Outcome & Impact</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#takeaways"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Takeaways</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main role="main" class="w-full sm:w-3/4 md:w-4/5 p-8">
+                <h1 class="text-4xl font-bold mb-4">
+                    <span class="text-blue-600">SHAPE JOY:</span> A Project to
+                    Extend Empathic Joy
+                </h1>
+                <p
+                    class="text-lg italic text-gray-600 mb-10 border-l-2 border-gray-100 pl-4"
+                >
+                    A longitudinal virtual study investigating behavioral
+                    interventions to extend the duration of
+                    <strong>empathic joy</strong> in children.
+                </p>
+
+                <div class="prose lg:prose-xl max-w-none">
+                    <section id="overview" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-6">Overview</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Problem
+                                </p>
+                                <p class="text-gray-800 font-medium italic">
+                                    Empathic joy is often fleeting in early
+                                    development. This study sought to identify
+                                    behavioral "anchors" that could extend this
+                                    positive emotional state.
+                                </p>
+                            </div>
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Outcome
+                                </p>
+                                <p class="text-gray-800 font-medium">
+                                    Maintained the study’s operational integrity
+                                    by managing a
+                                    <strong
+                                        >complex longitudinal participant
+                                        pipeline</strong
+                                    >
+                                    and refining virtual behavioral protocols.
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>
+                                <strong>My Role:</strong>
+                                <span class="text-blue-600 font-semibold"
+                                    >Research Assistant</span
+                                >
+                                (with the Leaf Lab).
+                            </li>
+                            <li>
+                                <strong>The Goal:</strong> Adapting complex,
+                                in-person observational methods for a virtual
+                                environment while maintaining high data
+                                integrity across diverse participant groups.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="understand" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4 text-gray-900">
+                            Understand
+                        </h2>
+                        <p class="mb-4">
+                            To understand how to measure "joy" virtually, we had
+                            to bridge the gap between
+                            <strong
+                                >clinical theory and remote feasibility</strong
+                            >.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-2">
+                            The Strategic "Why"
+                        </h3>
+                        <p class="mb-4">
+                            We transitioned to a
+                            <strong>Virtual Research Model</strong> to increase
+                            participant accessibility and socio-economic
+                            diversity. We chose remote synchronous observation
+                            over a lab setting to observe children in their
+                            natural home environments, where empathic behaviors
+                            are most authentically expressed and longitudinal
+                            engagement is higher.
+                        </p>
+                    </section>
+
+                    <section id="research" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Research</h2>
+                        <div
+                            class="bg-gray-50 border border-gray-100 p-6 rounded-xl mb-6"
+                        >
+                            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                                Findings: "The Virtual Engagement Gap"
+                            </h3>
+                            <ol class="list-decimal list-inside space-y-4">
+                                <li>
+                                    <strong>Protocol Fatigue:</strong> Virtual
+                                    sessions exceeding
+                                    <span class="text-red-600 font-bold italic"
+                                        >15 minutes</span
+                                    >
+                                    caused a significant engagement drop in
+                                    children aged 4-6.
+                                </li>
+                                <li>
+                                    <strong>Environmental Variance:</strong>
+                                    Inconsistent home lighting and camera angles
+                                    created
+                                    <em>"noise"</em> when coding non-verbal
+                                    empathic cues.
+                                </li>
+                                <li>
+                                    <strong>Dyadic Interference:</strong> Child
+                                    participants frequently looked to guardians
+                                    for <strong>"correct" answers</strong>,
+                                    requiring a shift in moderation techniques.
+                                </li>
+                            </ol>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">
+                            Process Artifacts
+                        </h3>
+
+                        <section class="mt-10 mb-16">
+                            <div class="w-full">
+                                <img
+                                    src="images/shape-joy-poster.png"
+                                    alt="Georgia State University Psychology Research Conference Poster"
+                                    class="w-full h-auto rounded-xl border border-gray-100 shadow-sm"
+                                >
+
+                                <div class="mt-4 border-l-4 border-blue-600 pl-4">
+                                    <p class="text-sm font-bold text-gray-900 uppercase tracking-wide">
+                                        Conference Publication
+                                    </p>
+                                    <p class="text-gray-600">
+                                        Georgia State University Psychology Research Conference Poster (2024)
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        </ul>
+                    </section>
+
+                    <section id="outcome" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Outcome & Impact </h2>
+                        <div
+                            class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-6"
+                        >
+                            <blockquote
+                                class="border-l-4 border-blue-600 pl-4 italic text-xl text-gray-700"
+                            >
+                                "The virtual environment requires a different
+                                kind of presence; we had to learn to read the
+                                room through a <strong>13-inch screen</strong>."
+                                <cite
+                                    class="block text-sm font-bold mt-2 text-gray-500 uppercase"
+                                    >— Research Observation Log</cite
+                                >
+                            </blockquote>
+                        </div>
+                        <p class="font-medium text-lg">
+                            Based on the evidence of
+                            <strong>"engagement lag,"</strong> I worked with the
+                            lead researchers to shorten task durations and
+                            simplify digital stimuli to maintain data integrity.
+                        </p>
+                    </section>
+
+                    <section id="takeaways" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Takeaways</h2>
+                        <p class="mb-4">
+                            <strong>The "Rigorous" Mindset:</strong> This role
+                            taught me that "inconclusive" results are valuable;
+                            they force researchers to audit their tools and
+                            methods for hidden virtual biases.
+                        </p>
+                        <p class="mb-4">
+                            <strong>Longitudinal Management:</strong> I learned
+                            that maintaining a year-long study requires extreme
+                            organizational diligence and a high-touch
+                            communication strategy with participant families.
+                        </p>
+
+                        <p class="font-bold text-blue-600">Future Roadmap:</p>
+                        <p class="mb-4">
+                            Successfully bridged the gap between clinical
+                            qualitative observation and remote tools (WebEx,
+                            Qualtrics) without compromising scientific rigor.
+                        </p>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">Let's Connect!</h2>
+                <div
+                    class="flex justify-center space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500"
+                >
+                    <a
+                        href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                        class="hover:text-black transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="mailto:your-email@example.com"
+                        class="hover:text-black transition-colors"
+                        >Email</a
+                    >
+                </div>
+                <p class="mt-12 text-gray-400 text-sm">
+                    &copy; 2026 Jessica Applegate.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI & Health Outcomes - Jessica Applegate</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                color: #1a1a1a;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            nav {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            h1 {
+                letter-spacing: -0.04em;
+                font-weight: 700;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 6rem;
+            }
+
+            .impact-card {
+                border-left: 4px solid #2563eb;
+                background-color: #eff6ff;
+                padding: 1.5rem;
+                border-radius: 0 0.75rem 0.75rem 0;
+            }
+        </style>
+    </head>
+    <body class="selection:bg-blue-100 selection:text-blue-900">
+        <nav class="fixed top-0 w-full z-50 py-6">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <a href="index.html" class="text-xl font-bold tracking-tighter"
+                    >Jessica Applegate</a
+                >
+                <div
+                    class="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-500"
+                >
+                    <a
+                        href="index.html#projects"
+                        class="hover:text-black transition-colors"
+                        >Work</a
+                    >
+                    <a
+                        href="about.html"
+                        class="hover:text-black transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit"
+                        target="_blank"
+                        class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition-all"
+                        >Resume</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mx-auto flex flex-wrap pt-32 pb-16">
+            <aside class="w-full sm:w-1/4 md:w-1/5 px-2">
+                <div class="sticky top-32 p-4 w-full bg-gray-100 rounded-2xl">
+                    <ul class="flex flex-col space-y-2">
+                        <li>
+                            <a
+                                href="#overview"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Overview</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#understand"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Understand</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#research"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Research</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#outcome"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Outcome & Impact</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#takeaways"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Takeaways</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main role="main" class="w-full sm:w-3/4 md:w-4/5 p-8">
+                <h1 class="text-4xl font-bold mb-4">
+                    <span class="text-blue-600">AI & Health Outcomes:</span>
+                    Mapping the Rural Digital Divide
+                </h1>
+                <p
+                    class="text-lg italic text-gray-600 mb-10 border-l-2 border-gray-100 pl-4"
+                >
+                    Investigating how geographic barriers prevent rural
+                    communities from health gains afforded by access to
+                    <strong>AI healthcare superstructures.</strong>
+                </p>
+
+                <div class="prose lg:prose-xl max-w-none">
+                    <section id="overview" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-6">Overview</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Problem
+                                </p>
+                                <p class="text-gray-800 font-medium">
+                                    AI benefits are concentrated in urban
+                                    regions of the us, leaving rural populations
+                                    in "tech-care deserts."
+                                </p>
+                            </div>
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Impact
+                                </p>
+                                <p class="text-gray-800 font-medium">
+                                    Demonstrated that
+                                    <strong>distance to care</strong> can be as
+                                    much of a digital barrier as a physical one,
+                                    quantifying how geographic isolation limits
+                                    access to advanced health care.
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>
+                                <strong>My Role:</strong>
+                                <span class="text-blue-600 font-semibold"
+                                    >Lead Researcher</span
+                                >
+                                (Directed Research Group, UW).
+                            </li>
+                            <li>
+                                <strong>The Toolkit:</strong> Quantitative
+                                Analysis in R (sf, ggplot2), Overleaf/LaTeX, CDC
+                                & USDA Public Datasets.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="understand" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4 text-gray-900">
+                            Understand
+                        </h2>
+                        <p class="mb-4">
+                            Designing for health equity requires looking at the
+                            <strong>infrastructure of access.</strong> If a
+                            patient lives 50 miles from a healthcare network
+                            that leverages AI tools <strong> and </strong>
+                            lacks high-speed broadband, the "user journey" for a
+                            life-saving diagnosis is fundamentally broken before
+                            it begins.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-2">
+                            The Strategic "Why"
+                        </h3>
+                        <p class="mb-4">
+                            I performed a
+                            <strong
+                                >Literature Review of 25 peer-reviewed research
+                                articles</strong
+                            >
+                            to identify existing friction points, relationships
+                            between health and space, and how spatial outcomes
+                            often drive social disparity. This research revealed
+                            that AI models are often trained on urban data,
+                            leading to a geographic disconnect that alienates
+                            rural users.
+                        </p>
+                    </section>
+
+                    <section id="research" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Research</h2>
+                        <div
+                            class="bg-gray-50 border border-gray-100 p-6 rounded-xl mb-6"
+                        >
+                            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                                Methodology & Data Rigor
+                            </h3>
+                            <ol class="list-decimal list-inside space-y-4">
+                                <li>
+                                    <strong>Data Engineering:</strong> Loaded
+                                    and cleaned multi-source public datasets
+                                    (USDA, CDC, NHANES) using
+                                    <strong>R</strong>.
+                                </li>
+                                <li>
+                                    <strong>Controlling for Confounds:</strong>
+                                    Isolated variables like Socioeconomic Status
+                                    (SES) to ensure findings weren't just a
+                                    proxy for wealth.
+                                </li>
+                                <li>
+                                    <strong>Spatial Regression:</strong> Used
+                                    `sf` and `sfdep` packages to visualize the
+                                    correlation between mileage and health risk.
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="mt-10">
+                            <h3
+                                class="text-2xl font-bold tracking-tight mb-6 text-gray-900"
+                            >
+                                Research Artifacts
+                            </h3>
+                            <div
+                                class="relative rounded-xl overflow-hidden border border-gray-200 bg-white group"
+                            >
+                                <div
+                                    class="bg-gray-50 px-3 py-1.5 border-b border-gray-200 flex justify-between items-center"
+                                >
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+                                        >Statistical Analysis Preview</span
+                                    >
+                                    <a
+                                        href="#"
+                                        class="text-[10px] text-blue-500 hover:underline"
+                                        >Full Screen
+                                        <i class="fa-solid fa-expand ml-1"></i
+                                    ></a>
+                                </div>
+                                <div class="space-y-8">
+                                    <div
+                                        class="bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden"
+                                    >
+                                        <img
+                                            src="images/chlor1plot.jpeg"
+                                            alt="chloropleth of the US"
+                                            class="w-full h-auto"
+                                        />
+                                        <div class="p-4">
+                                            <p class="text-sm text-gray-600">
+                                                The yellow stars on this
+                                                cloropleth plot are the
+                                                locations of what I have
+                                                referred to as "AI
+                                                Superstructures" and the
+                                                surrouding plot shows the
+                                                incidence of coronary heart
+                                                disease.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden"
+                                    >
+                                        <img
+                                            src="images/regression-ai-health.png"
+                                            alt="regression made with R"
+                                            class="w-full h-auto"
+                                        />
+                                        <div class="p-4">
+                                            <p class="text-sm text-gray-600">
+                                                The scatter plot illustrates a
+                                                positive correlation between the
+                                                distance to the nearest AI
+                                                facility and obesity rates,
+                                                suggesting that as distance
+                                                increases, the percentage of
+                                                obesity also tends to rise.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="outcome" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">
+                            Outcome & Impact
+                        </h2>
+                        <div
+                            class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-6"
+                        >
+                            <blockquote
+                                class="border-l-4 border-blue-600 pl-4 text-xl text-gray-700"
+                            >
+                                Infrastructure is the primary gatekeeper of
+                                health equity. When AI tools are tethered to
+                                urban digital standards, they inadvertently
+                                <strong>exclude rural communities</strong>,
+                                deepening the existing divide in health
+                                outcomes.
+                            </blockquote>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h4
+                                    class="font-bold text-blue-600 uppercase text-xs mb-2"
+                                >
+                                    1. The Distance Gap
+                                </h4>
+                                <p class="text-sm">
+                                    Statistical analysis showed a correlation
+                                    between distance from healthcare
+                                    "superstructures" and higher health risks.
+                                    This identifies a geographic penalty where
+                                    <strong> physical isolation </strong> limits
+                                    access to advanced diagnostic networks.
+                                </p>
+                            </div>
+                            <div>
+                                <h4
+                                    class="font-bold text-blue-600 uppercase text-xs mb-2"
+                                >
+                                    2. The Trust Barrier
+                                </h4>
+                                <p class="text-sm">
+                                    Literature synthesis suggests a
+                                    socio-technical divide: rural populations
+                                    may exhibit hesitation toward
+                                    "urban-centric" tech. This highlights that
+                                    social and cultural familiarity can be as
+                                    significant a hurdle as technical
+                                    infrastructure.
+                                </p>
+                            </div>
+                            <div>
+                                <h4
+                                    class="font-bold text-blue-600 uppercase text-xs mb-2"
+                                >
+                                    3. Connectivity Bottleneck
+                                </h4>
+                                <p class="text-sm">
+                                    Broadband scarcity acts as a gatekeeper for
+                                    advanced care. Data trends suggest that
+                                    limited connectivity prevents the deployment
+                                    of high-bandwidth AI tools, impacting the
+                                    health outcomes of rural communities by
+                                    stalling access to higher tech health care
+                                    for early detection/diagnosis and treatment.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="takeaways" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-900">
+                            Takeaways
+                        </h2>
+
+                        <div class="space-y-6">
+                            <div
+                                class="p-6 border-l-4 border-blue-600 rounded-r-xl"
+                            >
+                                <p
+                                    class="mb-2 text-blue-600 font-bold text-xs uppercase tracking-widest"
+                                >
+                                    The Big Picture
+                                </p>
+                                <p class="text-gray-800 leading-relaxed">
+                                    This project shifted my perspective on
+                                    research: it’s not just about interface
+                                    design—it’s about the
+                                    <strong>infrastructure of access.</strong>
+                                    For AI to be equitable, the environmental
+                                    and technical constraints of rural
+                                    communities must be treated as primary
+                                    requirements from Day 1.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <footer class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">Let's Connect!</h2>
+                <div
+                    class="flex justify-center space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500"
+                >
+                    <a
+                        href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                        class="hover:text-black transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="mailto:jessicapplegate@gmail.com"
+                        class="hover:text-black transition-colors"
+                        >Email</a
+                    >
+                </div>
+                <p class="mt-12 text-gray-400 text-sm">
+                    &copy; 2026 Jessica Applegate.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

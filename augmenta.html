@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Augmenta - Jessica Applegate</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                color: #1a1a1a;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            nav {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            h1 {
+                letter-spacing: -0.04em;
+                font-weight: 700;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 6rem; /* Adjust this value based on your fixed header's height */
+            }
+
+            /* High-impact card styling using your blue palette */
+            .impact-card {
+                border-left: 4px solid #2563eb; /* blue-600 */
+                background-color: #eff6ff; /* blue-50 */
+                padding: 1.5rem;
+                border-radius: 0 0.75rem 0.75rem 0;
+            }
+        </style>
+    </head>
+    <body class="selection:bg-blue-100 selection:text-blue-900">
+        <nav class="fixed top-0 w-full z-50 py-6">
+            <div
+                class="container mx-auto px-6 flex justify-between items-center"
+            >
+                <a href="index.html" class="text-xl font-bold tracking-tighter"
+                    >Jessica Applegate</a
+                >
+                <div
+                    class="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-500"
+                >
+                    <a
+                        href="index.html#projects"
+                        class="hover:text-black transition-colors"
+                        >Work</a
+                    >
+                    <a
+                        href="about.html"
+                        class="hover:text-black transition-colors"
+                        >About</a
+                    >
+                    <a
+                        href="https://docs.google.com/document/d/15MfiJ6FZPKg8WslcF1OjXYO_8v2TTUzG/edit"
+                        target="_blank"
+                        class="px-5 py-2.5 bg-black text-white rounded-full hover:bg-gray-800 transition-all"
+                        >Resume</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mx-auto flex flex-wrap pt-32 pb-16">
+            <!-- Side Navigation -->
+            <aside class="w-full sm:w-1/4 md:w-1/5 px-2">
+                <div class="sticky top-32 p-4 w-full bg-gray-100 rounded-2xl">
+                    <ul class="flex flex-col space-y-2">
+                        <li>
+                            <a
+                                href="#overview"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Overview</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#understand"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Understand</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#research"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Research</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#outcome"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Outcome & Impact</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#takeaways"
+                                class="text-gray-500 hover:text-black transition-colors font-medium"
+                                >Takeaways</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main role="main" class="w-full sm:w-3/4 md:w-4/5 p-8">
+                <h1 class="text-4xl font-bold mb-4">
+                    <span class="text-blue-600">Augmenta:</span> Navigating the
+                    Intersection of AR and Driver Anxiety
+                </h1>
+                <p
+                    class="text-lg italic text-gray-600 mb-10 border-l-2 border-gray-100 pl-4"
+                >
+                    <strong>The Mission:</strong> Designing a voice-activated
+                    AR/VR windshield to reduce cognitive load and provide
+                    emotional support for drivers.
+                </p>
+
+                <div class="prose lg:prose-xl max-w-none">
+                    <section id="overview" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-6">Overview</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Problem
+                                </p>
+                                <p class="text-gray-800 font-medium">
+                                    Drivers are overwhelmed by <span class="text-blue-700">"screen fragmentation"</span>—the dangerous cognitive tax of
+                                    switching focus between a mobile GPS and the road—which
+                                    heightens anxiety and slows reaction times.
+                                </p>
+                            </div>
+                            <div class="impact-card">
+                                <p
+                                    class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1"
+                                >
+                                    The Outcome
+                                </p>
+                                <p class="text-gray-800 font-medium">
+                                    A high-fidelity <span class="text-blue-700">AR HUD "Co-Pilot"</span> concept that centralizes
+                                    navigation into the driver’s natural line of sight,
+                                    reducing cognitive load and resolving the safety gaps found in traditional hands-free interfaces.
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>
+                                <strong>My Role:</strong>
+                                <span class="text-blue-600 font-semibold"
+                                    >UX Researcher & Strategist</span
+                                >
+                                (Collaborative team of 3).
+                            </li>
+                            <li>
+                                <strong>Context:</strong> A 10-week intensive
+                                sprint for HCDE 518 (University of Washington).
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="understand" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4 text-gray-900">
+                            Understand
+                        </h2>
+                        <p class="mb-4">
+                            We began with a broad question:
+                            <strong>How can we keep eyes on the road?</strong>
+                        </p>
+                        <p class="mb-4">
+                            To answer this question we began a literature review and began benchmarking other similar products.
+                            This research led to a <strong> key insight</strong>: driver distraction is often a direct symptom of underlying driving anxiety.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-2">
+                            The Strategic Shift
+                        </h3>
+                        <p class="mb-4">
+                            We realized that reducing distraction wasn't enough;
+                            we had to address the
+                            <strong>emotional state</strong> of the driver. The
+                            goal was to create a system that feels like a
+                            "co-pilot," not just a map.
+                        </p>
+                    </section>
+
+                    <section id="research" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Research</h2>
+                        <div
+                            class="bg-gray-50 border border-gray-100 p-6 rounded-xl mb-6"
+                        >
+                            <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                                Methodology & Rigor
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                                    <div class="text-blue-600 mb-3">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900 mb-2">Quantitative Survey (n=24)</h4>
+                                    <p class="text-sm text-gray-700 leading-relaxed">
+                                        Validated core navigation pain points, revealing that 60% of drivers prioritize route efficiency while 50% actively change behavior to avoid tolls.
+                                    </p>
+                                </div>
+
+                                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                                    <div class="text-blue-600 mb-3">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900 mb-2">Qualitative Interviews (n=4)</h4>
+                                    <p class="text-sm text-gray-700 leading-relaxed">
+                                        Conducted deep dives into driver psychology. We discovered that instruction clarity and timely feedback are the primary levers for reducing situational anxiety.
+                                    </p>
+                                </div>
+
+                                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                                    <div class="text-blue-600 mb-3">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900 mb-2">Literature Review</h4>
+                                    <p class="text-sm text-gray-700 leading-relaxed">
+                                        Established critical guardrails for AR/VR integration by analyzing established cognitive load limits to ensure driver safety.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="text-2xl font-bold pt-16 mt-8 mb-6 border-t border-gray-100">
+                                Operational Artifacts
+                            </h3>
+
+                            <div class="space-y-12">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Mapping the User Journey</h4>
+                                        <p class="text-gray-600 mb-4 text-sm">map the transition from manual input to AR-supported navigation for the Augmenta windshield interface, providing a foundational logic for the engineering team to build a cohesive human-AI driving experience that reduces cognitive load during high-stakes maneuvers.</p>
+                                        <a href="images/augmenta/userflows-all.png" target="_blank" class="text-blue-600 text-xs font-bold uppercase tracking-widest hover:underline">View High-Res Flow</a>
+                                    </div>
+                                    <img src="images/augmenta/userflows-all.png" alt="Augmenta User Flows" class="rounded-2xl shadow-md border border-gray-100">
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                    <div class="order-2 md:order-1">
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <img src="images/augmenta/persona2lady.png" alt="Primary Persona" class="rounded-xl shadow-sm border border-gray-100">
+                                            <img src="images/augmenta/second-male-persona.png" alt="Secondary Persona" class="rounded-xl shadow-sm border border-gray-100">
+                                        </div>
+                                    </div>
+                                    <div class="order-1 md:order-2">
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Targeting High-Anxiety Personas</h4>
+                                        <p class="text-gray-600 mb-4 text-sm">We moved away from "general drivers" to focus on those most vulnerable to cognitive overload. These personas helped us prioritize the "Safe Place" protocol and voice-first interaction design.</p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Contextual Storyboarding</h4>
+                                        <p class="text-gray-600 mb-4 text-sm">Before moving to Figma, we storyboarded the environmental context. This allowed us to visualize the HUD interface in various lighting and traffic conditions, ensuring the "Co-Pilot" concept felt seamless.</p>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <img src="images/augmenta/storyboard2.png" alt="Storyboard Frame 1" class="rounded-xl shadow-md border border-gray-100">
+                                        <img src="images/augmenta/storyboard3.png" alt="Storyboard Frame 2" class="rounded-xl shadow-md border border-gray-100">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                                <h4 class="font-bold text-gray-900 mb-2 italic">Persona Iteration Note:</h4>
+                                <p class="text-sm text-gray-700">
+                                    <strong>V1 vs. V2:</strong> We didn't just make personas; we iterated them. When our design pivoted from mobile to HUD, we "retired" the aggressive driver persona to focus on the <strong>Inexperienced/Stressed Driver</strong> who benefits most from emotional support features.
+                                </p>
+                            </div>
+                    </section>
+
+                    <section id="outcome" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">
+                            Outcome & Impact
+                        </h2>
+                        <div
+                            class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-6"
+                        >
+                            <blockquote
+                                class="border-l-4 border-blue-600 pl-4 italic text-xl text-gray-700"
+                            >
+                                "I can't tell how to interact with this while my
+                                hands are on the wheel."
+                                <cite
+                                    class="block text-sm font-bold mt-2 text-gray-500 uppercase"
+                                    >— Participant 03, Leading to the removal of
+                                    the mobile-entry requirement.</cite
+                                >
+                            </blockquote>
+                        </div>
+                        <p class="font-medium text-lg">
+                            Based on two rounds of testing, we implemented five
+                            "Non-Negotiable" requirements:
+                        </p>
+                        <ol class="list-decimal list-inside space-y-2 mt-4">
+                            <li>
+                                <strong>Adaptive Interface:</strong> Users can
+                                scale UI elements based on personal visual
+                                needs.
+                            </li>
+                            <li>
+                                <strong>"Safe Place" Protocol:</strong> A
+                                voice-activated feature to guide anxious users
+                                to the nearest stop.
+                            </li>
+                            <li>
+                                <strong>Multi-Modal Input:</strong> Seamless
+                                transition between voice and manual controls.
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section id="takeaways" class="mb-12">
+                        <h2 class="text-3xl font-bold mb-4">Takeaways</h2>
+                        <p class="mb-4">
+                            <strong>Operational Excellence:</strong> Handled a
+                            major project pivot mid-sprint by re-coding our user
+                            flows and refining personas to match the new
+                            HUD-centric scope.
+                        </p>
+                        <p class="mb-4">
+                            <strong>Leadership:</strong> Mentored team members
+                            through the transition from low-fi storyboards to a
+                            high-fidelity Figma prototype that satisfied both
+                            "Anxiety" and "Distraction" objectives.
+                        </p>
+
+                        <p class="font-bold text-blue-600">Future Vision:</p>
+                        <p class="mb-4">
+                            If given a 20-week timeline, our focus would shift
+                            to
+                            <strong
+                                >regulatory compliance testing (NHTSA
+                                standards)</strong
+                            >
+                            to move from a concept to a "market-ready" safety
+                            tool.
+                        </p>
+
+                        <h3 class="text-2xl font-bold mb-6">Final Deliverables</h3>
+
+                        <div class="space-y-12">
+                            <div class="group">
+                                <p class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Final High-Fidelity Prototype</p>
+                                    <img src="images/augmenta/screen1.png" alt="Augmenta High Fidelity Prototype"
+                                         class="rounded-2xl shadow-xl hover:shadow-2xl transition-shadow border border-gray-100">
+                            </div>
+
+                            <div class="group">
+                                <p class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Brand Style Guide</p>
+                                <img src="images/augmenta/styleguide.png" alt="Augmenta Brand Style Guide"
+                                     class="rounded-2xl shadow-lg border border-gray-100">
+                            </div>
+
+                            <div class="flex flex-col mt-8">
+                                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Product Pitch</span>
+                                    <div class="aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                        <iframe
+                                            class="w-full h-full"
+                                            src="https://www.youtube.com/embed/jzRpy2EWBdU"
+                                            title="Augmenta Concept Video"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    <p class="mt-4 font-semibold text-gray-900">[Augmenta Concept Video]</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+            </main>
+        </div>
+
+        <footer class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8">Let's Connect!</h2>
+                <div
+                    class="flex justify-center space-x-8 text-sm font-bold uppercase tracking-widest text-gray-500"
+                >
+                    <a
+                        href="https://www.linkedin.com/in/jessica-applegate-197b6b230/"
+                        class="hover:text-black transition-colors"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="mailto:your-email@example.com"
+                        class="hover:text-black transition-colors"
+                        >Email</a
+                    >
+                </div>
+                <p class="mt-12 text-gray-400 text-sm">
+                    &copy; 2026 Jessica Applegate.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
