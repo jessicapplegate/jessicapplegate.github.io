@@ -78,6 +78,20 @@
             }
         </style>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XBKCQCB5FH"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-XBKCQCB5FH");
+    </script>
     <body class="selection:bg-blue-100 selection:text-blue-900">
         <nav class="fixed top-0 w-full z-50 py-6">
             <div
@@ -162,6 +176,27 @@
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <a
+                        href="workiva.html"
+                        class="project-card group block p-4 rounded-3xl bg-white"
+                    >
+                        <div class="card-img-container mb-6">
+                            <img src="images/workiva.png" alt="Workiva" />
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold tracking-tight">
+                                Workiva
+                            </h3>
+                            <div class="flex gap-2">
+                                <span class="tag">Enterprise UXR</span>
+                                <span class="tag">AI</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            [Password Protected] — Optimizing AI-powered
+                            financial workflows.
+                        </p>
+                    </a>
+                    <a
                         href="equipad.html"
                         class="project-card group block p-4 rounded-3xl bg-white"
                     >
@@ -199,34 +234,13 @@
                             </h3>
                             <div class="flex gap-2">
                                 <span class="tag">Data Science</span>
+                                <span class="tag">AI</span>
                                 <span class="tag">Statistics</span>
                             </div>
                         </div>
                         <p class="text-gray-500 text-lg leading-relaxed">
                             Spatial analysis of AI-healthcare infrastructure and
                             rural community health.
-                        </p>
-                    </a>
-
-                    <a
-                        href="workiva.html"
-                        class="project-card group block p-4 rounded-3xl bg-white"
-                    >
-                        <div class="card-img-container mb-6">
-                            <img src="images/workiva.png" alt="Workiva" />
-                        </div>
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-2xl font-bold tracking-tight">
-                                Workiva
-                            </h3>
-                            <div class="flex gap-2">
-                                <span class="tag">Enterprise UXR</span>
-                                <span class="tag">AI</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-500 text-lg leading-relaxed">
-                            [Password Protected] — Optimizing AI-powered
-                            financial workflows.
                         </p>
                     </a>
 
